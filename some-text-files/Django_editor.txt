@@ -1,0 +1,340 @@
+							-----------   django-content-editor.   ------------
+							===================================================
+
+app/models.py:
+
+from django.db import models
+
+from content_editor.models import Region, create_plugin_base
+
+
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    pub_date = models.DateField(blank=True, null=True)
+
+    # The ContentEditor requires a "regions" attribute or property
+    # on the model. Our example hardcodes regions; if you need
+    # different regions depending on other factors have a look at
+    # feincms3's TemplateMixin.
+
+    regions = [
+        Region(key='main', title='main region'),
+        Region(key='sidebar', title='sidebar region'),
+    ]
+
+    def __str__(self):
+        return self.title
+
+
+# create_plugin_base does nothing outlandish, it only defines an
+# abstract base model with the following attributes:
+# - a parent ForeignKey with a related_name that is guaranteed to
+#   not clash
+# - a region CharField containing the region key defined above
+# - an ordering IntegerField for ordering plugin items
+# - a get_queryset() classmethod returning a queryset for the
+#   Contents class and its helpers (a good place to add
+#   select_related and #   prefetch_related calls or anything
+#   similar)
+# That's all. Really!
+
+
+ArticlePlugin = create_plugin_base(Article)
+
+class RichText(ArticlePlugin):
+    text = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = 'rich text'
+        verbose_name_plural = 'rich texts'
+
+
+class Download(ArticlePlugin):
+    file = models.FileField(upload_to='downloads/%Y/%m/')
+
+    class Meta:
+        verbose_name = 'download'
+        verbose_name_plural = 'downloads'
+
+
+
+==========================================================================================
+
+app/admin.py:
+
+from django import forms
+from django.contrib import admin
+from django.db import models
+
+from content_editor.admin import ContentEditor, ContentEditorInline
+
+from .models import Article, Richtext, Download
+
+
+class RichTextarea(forms.Textarea):
+    def __init__(self, attrs=None):
+        # Provide class so that the code in plugin_ckeditor.js knows
+        # which text areas should be enhanced with a rich text
+        # control:
+        default_attrs = {'class': 'richtext'}
+        if attrs:
+            default_attrs.update(attrs)
+        super(RichTextarea, self).__init__(default_attrs)
+
+
+class RichTextInline(ContentEditorInline):
+    model = RichText
+    formfield_overrides = {
+        models.TextField: {'widget': RichTextarea},
+    }
+    regions = ['main']  # We only want rich texts in "main" region.
+
+    class Media:
+        js = (
+            '//cdn.ckeditor.com/4.5.6/standard/ckeditor.js',
+            'app/plugin_ckeditor.js',
+        )
+
+admin.site.register(
+    Article,
+    ContentEditor,
+    inlines=[
+        RichTextInline,
+        # The create method serves as a shortcut; for quickly
+        # creating inlines:
+        ContentEditorInline.create(model=Download),
+    ],
+)
+
+
+==========================================================================================
+
+app/static/app/plugin_ckeditor.js:
+
+/* global django, CKEDITOR */
+(function($) {
+
+    /* Improve spacing */
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = "div[id*='cke_id_'] {margin-left:170px;}";
+    $('head').append(style);
+
+    CKEDITOR.config.width = '787';
+    CKEDITOR.config.height= '300';
+    CKEDITOR.config.format_tags = 'p;h1;h2;h3;h4;pre';
+    CKEDITOR.config.toolbar = [[
+        'Maximize','-',
+        'Format','-',
+        'Bold','Italic','Underline','Strike','-',
+        'Subscript','Superscript','-',
+        'NumberedList','BulletedList','-',
+        'Anchor','Link','Unlink','-',
+        'Source'
+    ]];
+
+    // Activate and deactivate the CKEDITOR because it does not like
+    // getting dragged or its underlying ID changed.
+    // The 'data-processed' attribute is set for compatibility with
+    // django-ckeditor. (Respectively to prevent django-ckeditor's
+    // ckeditor-init.js from initializing CKEditor again.)
+
+    $(document).on(
+        'content-editor:activate',
+        function(event, $row, formsetName) {
+            $row.find('textarea[data-type=ckeditortype]').each(function() {
+                if (this.getAttribute('data-processed') != '1') {
+                    this.setAttribute('data-processed', '1')
+                    $($(this).data('external-plugin-resources')).each(function(){
+                        CKEDITOR.plugins.addExternal(this[0], this[1], this[2]);
+                    });
+                    CKEDITOR.replace(this.id, $(this).data('config'));
+                }
+            });
+        }
+    ).on(
+        'content-editor:deactivate',
+        function(event, $row, formsetName) {
+            $row.find('textarea[data-type=ckeditortype]').each(function() {
+                try {
+                    CKEDITOR.instances[this.id] && CKEDITOR.instances[this.id].destroy();
+                    this.setAttribute('data-processed', '0')
+                } catch(err) {}
+            });
+        }
+    );
+})(django.jQuery);
+
+
+
+
+============================================================================================================
+
+
+app/views.py:
+
+from django.shortcuts import get_object_or_404, render
+from django.utils.html import format_html, mark_safe
+
+from content_editor.contents import contents_for_item
+
+from .models import Article, RichText, Download
+
+
+def render_items(items):
+    for item in items:
+        if isinstance(item, RichText):
+            yield mark_safe(item.text)
+        elif isinstance(item, Download):
+            yield format_html(
+                '<a href="{}">{}</a>',
+                item.file.url,
+                item.file.name,
+            )
+
+
+def article_detail(request, id):
+    article = get_object_or_404(Article, id=id)
+    contents = contents_for_item(article, [RichText, Download])
+    return render(request, "app/article_detail.html", {
+        "article": article,
+        "content": {
+            region.key: mark_safe("".join(render_items(contents[region.key])))
+            for region in article.regions
+        },
+    })
+
+
+
+==================================================================================================
+
+app/templates/app/article_detail.html:
+
+<article>
+    <h1>{{ article }}</h1>
+    {{ article.pub_date }}
+
+    {{ content.main }}
+</article>
+<aside>{{ content.sidebar }}</aside>
+
+
+====================================================================================================
+
+app/admin.py:
+
+from content_editor.admin import ContentEditor, ContentEditorInline
+from js_asset import JS
+
+# ... the RichTextInline from above
+
+class ArticleAdmin(ContentEditor):
+    inlines = [
+        RichTextInline,
+        ContentEditorInline.create(model=Download),
+    ]
+
+    class Media:
+        js = (
+            JS('https://use.fontawesome.com/releases/v5.0.10/js/all.js', {
+                'defer': 'defer',
+                'integrity': 'sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+',  # noqa
+                'crossorigin': 'anonymous',
+            }, static=False),
+            'app/plugin_buttons.js',
+        )
+
+
+======================================================================================================
+
+app/plugin_buttons.js:
+
+(function($) {
+    $(document).on('content-editor:ready', function() {
+        ContentEditor.addPluginButton(
+            'app_richtext',
+            '<i class="fas fa-pencil-alt"></i>'
+        );
+        ContentEditor.addPluginButton(
+            'app_download',
+            '<i class="fas fa-download"></i>'
+        );
+    });
+})(django.jQuery);
+
+
+
+
+=======================================================================================================
+
+-----------------------------------------------------------------------------------------------------------
+
+Simple usage is as follows:
+
+from content_editor.contents import Contents
+
+article = Article.objects.get(...)
+c = Contents(article.regions)
+for item in article.app_richtext_set.all():
+    c.add(item)
+for item in article.app_download_set.all():
+    c.add(item)
+
+# Returns a list of all items, sorted by the definition
+# order of article.regions and by item ordering
+list(c)
+
+# Returns a list of all items from the given region
+c['main']
+# or
+c.main
+
+# How many items do I have?
+len(c)
+
+# Inherit content from the given contents instance if one of my
+# own regions is empty and has its "inherited" flag set.
+c.inherit_regions(some_other_contents_instance)
+
+# Plugins from unknown regions end up in _unknown_region_contents:
+c._unknown_region_contents
+
+For most use cases you’ll probably want to take a closer look at the following helper methods instead of instantiating a Contents class directly:
+contents_for_items
+
+Returns a contents instance for a list of main models:
+
+articles = Article.objects.all()[:10]
+contents = contents_for_items(
+    articles,
+    plugins=[RichText, Download],
+)
+
+something = [
+    (article, contents[article])
+    for article in articles
+]
+
+contents_for_item
+
+Returns the contents instance for a given main model (note that this helper calls contents_for_items to do the real work):
+
+# ...
+contents = contents_for_item(
+    article,
+    plugins=[RichText, Download],
+)
+
+It is also possible to add additional items for inheriting regions. This is most useful with a page tree where i.e. sidebar contents are inherited from ancestors (this example uses methods added by django-tree-queries as used in feincms3):
+
+page = ...
+contents = contents_for_item(
+    page,
+    plugins=[,,,],
+    page.ancestors().reverse(),  # Prefer content closer to the
+                                 # current page
+)
+
+ 
+
+ ---------------------------------------------------------------------------------------------------------------------

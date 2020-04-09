@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PruDigital SMS Panel-</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="content-wrapper">
+         <div class="box-header with-border">
+            <div class="col-md-12">
+               <div class="col-md-8">
+               </div>
+               <div class="col-md-4">
+                  <div class="box-tools pull-right">
+                     <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span> <i class="fa fa-caret-down"></i>
+                     </div>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <br>
+            </div>
+         </div>
+         <div class="tab-content data-show">
+         </div>
+      </div>
+      <div class="pop-loader" style="display:none !important; z-index:999;">
+         <img src="C:\Users\Sourabh\Desktop\SMS_design\images\straight-loader.gif" height="200" width="200"/>
+      </div>
+      </div></div></div></div> 
+      <div id="oaNavigation">
+         <table width="100%" border="0">
+            <tr>
+               <td width="5%" height="21" align="left" valign="middle"><img src="C:\Users\Sourabh\Desktop\SMS_design\images\acc.jpg" width="50" height="50" /></td>
+               <td width="95%" align="left" valign="middle">
+                  <h3 class="noBreadcrumb">A P I Manager</h3>
+               </td>
+            </tr>
+         </table>
+         <div class="corner left"></div>
+         <div class="corner right"></div>
+      </div>
+      <div id="" style="min-height: 624px;">
+      <div id="">
+      <div id="" class="messagePlaceholder mb-2"></div>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+         <tr>
+            <td width="74%"  bgcolor="#000000" style="color:#FFF; height:25px;"><strong> &nbsp;&nbsp;SMA API</strong></td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div class="row">
+      <div class="col-sm-12 col-md-12">
+         <table class="table table-striped table-bordered" id="myData">
+            <thead>
+               <tr>
+                  <th><strong>ID</strong></th>
+                  <th><strong>Name</strong></th>
+                  <th><strong>URL</strong></th>
+                  <th><strong>SMS Left</strong></th>
+                  <th><strong>SMS Cost</strong></th>
+                  <th><strong>Country</strong></th>
+                  <th><strong>Sender IDS</strong></th>
+                  <th><strong>Status</strong></th>
+                  <th><strong>Modify</strong></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>SIM BASED API</td>
+                  <td>{msg}</td>
+                  <td>947099092</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Inactive</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>VIDEOCON TRANS</td>
+                  <!--<td>http://127.0.0.1:13013/cgi-bin/sendsms?smsc=TRANS&user=admin&pass=prusms&to={number}&text={msg}&from={senderid}</td>-->
+                  <td>----</td>
+                  <td>996334470</td>
+                  <td>0.1</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>VIDEOCON PROMO</td>
+                  <!--<td>http://127.0.0.1:13013/cgi-bin/sendsms?smsc=PROMO&user=admin&pass=prusms&to={number}&text={msg}&from={senderid}</td>-->
+                  <td>---</td>
+                  <td>999541812</td>
+                  <td>0.1</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>PDXSIM</td>
+                  <td>{msg}</td>
+                  <td>842350908</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>Broadcomsoluions</td>
+                  <td>{msg}</td>
+                  <td>845022447</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>CrystalMedia</td>
+                  <td>{msg}</td>
+                  <td>855789293</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>DSDigital</td>
+                  <td>{msg}</td>
+                  <td>862123467</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>EBizzsolutions</td>
+                  <td>{msg}</td>
+                  <td>873649655</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>FameAdvertising</td>
+                  <td>{msg}</td>
+                  <td>865299587</td>
+                  <td>0.038</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>prudigitalsim</td>
+                  <td>{msg}</td>
+                  <td>824446620</td>
+                  <td>0.045</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>acedigital</td>
+                  <td>{msg}</td>
+                  <td>893623387</td>
+                  <td>0.04</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>ec2crm</td>
+                  <td>{msg}</td>
+                  <td>999999995</td>
+                  <td>0.04</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>hubbot</td>
+                  <td>{msg}</td>
+                  <td>999999993</td>
+                  <td>0.04</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+               <tr>
+                  <td height="30">&nbsp;</td>
+                  <td>test</td>
+                  <td>google.com</td>
+                  <td>1111</td>
+                  <td>12</td>
+                  <td>IN</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">List / Add</button></a></td>
+                  <td>Active</td>
+                  <td align="center"><a href="#"><button class="btn btn-success btn-sm">Modify</button></a></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>

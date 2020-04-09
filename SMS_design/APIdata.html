@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PruDigital SMS Panel-</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>-->
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav mb-3">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">SMS API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Add API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Delete API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Update API</a>
+                  <!--<a class="nav-link disabled" href="#">Update API</a>-->
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <div id="">
+      <div id="">
+         <table width="100%" border="0">
+            <tr>
+               <td width="5%" height="21" align="left" valign="middle"><img src="C:\Users\Sourabh\Desktop\SMS_design\images\acc.jpg" width="50" height="50" /></td>
+               <td width="95%" align="left" valign="middle">
+                  <h3 class="noBreadcrumb">A P I Manager</h3>
+               </td>
+            </tr>
+         </table>
+         <div class="corner left"></div>
+         <div class="corner right"></div>
+      </div>
+      <div id="" style="min-height: 624px;">
+      <div id="">
+      <div id="" class="messagePlaceholder mb-2"></div>
+      <table width="100%" border="0" cellspacing="2" cellpadding="2">
+         <tr>
+            <td width="74%"  bgcolor="#000000" style="color:#FFF; height:25px;"><strong> &nbsp;&nbsp;Add smsapi</strong></td>
+         </tr>
+         <tr>
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <form id="" name="form1" method="post" action="" enctype="multipart/form-data">
+         <input type="hidden" name="id" value="" />
+         <div class="col-sm-8 offset-sm-2">
+         <!--<div class="form-group col-sm-8">-->
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control text-center" id="n" value="" required>
+         </div>
+         <!--<div class="form-group col-sm-8">-->
+         <div class="col-sm-8 offset-sm-2">
+            <label for="url">URL:</label>
+            <input type="text" name="url" class="form-control text-center" id="url" value="" required>
+         </div>
+         <!--<div class="form-group col-sm-8">-->
+         <div class="col-sm-8 offset-sm-2">
+            <label for="calls">SMS Calls:</label>
+            <input type="text" name="calls" class="form-control text-center" id="cal" value="" required>
+         </div>
+         <!--<div class="form-group col-sm-8">-->
+         <div class="col-sm-8 offset-sm-2">
+            <label for="smscost">SMS Cost:</label>
+            <input type="text" name="smscost" class="form-control text-center" id="smscost" value="" required>
+         </div>
+         <!--<div class="form-group col-sm-8">-->
+         <div class="col-sm-8 offset-sm-2 mb-4">
+            <label for="country">Country:</label>
+            <select name="country" class="form-control text-center" id="country" required>
+               <option value="IN">INDIA</option>
+               <option value="US">USA</option>
+            </select>
+         </div>
+         <!--<div class="form-group col-sm-8">-->
+         <div class="col-sm-8 offset-sm-2">
+            <input type="submit" class="btn btn-success btn-sm" name="Submit" value="Add SMS API" />
+         </div>
+      </form>
+   </body>
+</html>

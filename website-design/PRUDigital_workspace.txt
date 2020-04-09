@@ -1,0 +1,594 @@
+Screen popup best ==>
+1) http://jsplayground.syncfusion.com/2vfrbmlp?_ga=2.83024287.829990997.1574682058-122927567.1574682058
+2) http://jsplayground.syncfusion.com/ayfhtzfw
+
+---------------------------------------------------------------------------------------------------------------
+web-secuirty --->>  
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+hacker site-->
+
+https://www.gstar168.com/assets/global/plugins/jquery-file-upload/
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+https://www.edx.org/course/web-security-fundamentals
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Web security ==>>  
+1) https://www.youtube.com/watch?v=1cKfcMGWfwY
+2) https://www.youtube.com/watch?v=dz7Ntp7KQGA
+3) 
+
+
+````````````````````````````````````````````````````````````````
+solr url ==>
+
+http://185.64.106.145:8984/solr/#/
+
+````````````````````````````````````````````````````````````````
+rabbit MQ url ==>
+
+http://185.64.106.145:15672/#/queues
+username ==>  mqadmin
+password ==>  mqadminpassword
+
+````````````````````````````````````````````````````````````````
+sms urls ==>  http://sms.sheenz.in/lists/
+database connection -->>
+
+$servername = "185.64.106.145";
+$username = "smsapi_usr";
+$password = "Prudigital@@123";
+$dbname = "smsapi_db";
+
+
+---------------------------------------------------------------------------------
+
+Code php callupon org ..
+
+url==>>
+
+home create file path ...   
+C:\xampp\htdocs\callupon-code\email-subscriber.php
+
+run project url ==>>
+http://localhost/callupon-code/email-subscriber.php
+
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````
+Server -->  prudigital-5MHZ
+password -->  saisai@321
+---------------------------------
+
+*****  main-look site ==>>  render.gg (looking good feel) *****
+website ...??
+0.5) https://www.tutorialrepublic.com/php-tutorial/php-send-email.php
+0) https://www.indofolio.com/
+1) https://www.phptpoint.com/projects/
+2) https://www.phptpoint.com/php-introduction/
+3) https://www.pexels.com/search/banner%20background/
+4) https://unsplash.com/backgrounds/apps/website
+5) https://colorlib.com/wp/templates/
+6) https://getbootstrap.com/docs/4.0/examples/
+7) http://designer.sheenz.in/sourabh/Gogetscore/profile.html
+8) https://templates.office.com/en-in/templates-for-word
+9) https://templates.office.com/#categories
+10) https://www.codeply.com/go/KrUO8QpyXP
+11) https://bootsnipp.com/tags/profile/4
+12) https://demos.creative-tim.com/argon-dashboard/index.html
+13) https://www.creative-tim.com/product/argon-dashboard?partner=114912
+14) http://bootstrap4.guide/
+15) https://www.bankbazaar.com/myaccount.html
+16) https://uicookies.com/bootstrap-datatable/
+17) https://themeforest.net/category/site-templates?clickid=yjf0-FSnQxyJW5zwUx0Mo3QzUkn1yCQMZ2mVSc0&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=mediapartner&irpid=1297116&utm_campaign=af_impact_radius_1297116&utm_medium=affiliate&utm_source=impact_radius
+18) https://mdbootstrap.com/docs/jquery/tables/search/
+19) https://uicookies.com/bootstrap-search-box/
+20) https://fancygrid.com/dashboards/clients/
+21) https://bootsnipp.com/snippets/VgoAQ
+22) https://mdbootstrap.com/plugins/jquery/gallery/
+23) https://www.creative-tim.com/blog/web-design/bootstrap-background-image/
+24) https://www.bigcommerce.com/blog/7-product-filtering-implementations-that-make-macys-best-in-class/#undefined
+25) https://demo.products-filter.com/?swoof=1&slider__width=1-53&min_price=25&max_price=120
+26) https://code.tutsplus.com/articles/best-bootstrap-plugins--cms-31431
+27) https://codepen.io/adrienlochon/pen/Jgjrx
+28) https://css-tricks.com/responsive-multi-column-data-tables/
+29) https://datatables.net/
+30) https://codepen.io/Palestinian/pen/mDKkG
+31) https://webflow.com/
+32) https://www.google.com/imgres?imgurl=https%3A%2F%2Fmobirise.com%2Fvideo-background%2Fassets1%2Fimages%2Fbs-youtube-video-1785x1785.jpg&imgrefurl=https%3A%2F%2Fmobirise.com%2Fvideo-background%2Fbootstrap-youtube-video.html&docid=v4q45-Kx3Oo4NM&tbnid=j5A6jnyJuGhw_M%3A&vet=12ahUKEwjMyaLiwOnlAhWdyosBHQVnBDU4ZBAzKCAwIHoECAEQIQ..i&w=1785&h=1785&bih=610&biw=1280&q=mobile%20popup%20background&ved=2ahUKEwjMyaLiwOnlAhWdyosBHQVnBDU4ZBAzKCAwIHoECAEQIQ&iact=mrc&uact=8
+33) https://mdbootstrap.com/plugins/jquery/extended-cards/
+34) http://embed.plnkr.co/Eax7pj/preview
+35) https://v4-alpha.getbootstrap.com/components/forms/
+36) all table datatable -->
+https://datatables.net/examples/index
+37) https://dribbble.com/tags/website_template
+38) https://www.elegantthemes.com/gallery/divi/?theme=Divi
+39) https://www.sketchappsources.com/tag/web.html
+40) https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title
+41) https://www.nassnig.org/
+42) https://www.gstar168.com/
+43) https://startbootstrap.com/themes/
+44) http://www.grinbrands.in/
+45) https://cxsecurity.com/
+46) https://www.sitepoint.com/using-node-mysql-javascript-client/
+--------------------------------------------------------------------------------
+Important mvc framework -->>
+
+47) https://www.tutorialspoint.com/mvc_framework/mvc_framework_folders.htm
+
+-------------------------------------------------------------------------------
+PHP framework codinator --->
+
+48) https://www.google.com/search?client=firefox-b-d&q=https%3A%2F%2Fcodeigniter.com+is+mvc+framework
+49) https://codeigniter.com/user_guide/overview/appflow.html
+50) https://codingcyber.org/best-free-php-ide-for-web-developers-674/
+51) https://www.tutorialspoint.com/mvc_framework/mvc_framework_folders.htm
+52) https://codeigniter.com/user_guide/overview/appflow.html
+53) https://www.phptpoint.com/codeigniter-tutorial/
+54) https://www.guru99.com/codeigniter-tutorial.html
+55) https://www.phptpoint.com/codeigniter-overview/
+56) https://www.cloudways.com/blog/connect-mysql-with-php/
+57) https://stackoverflow.com/questions/9652953/using-ip-address-connect-to-mysql
+58) https://forums.cpanel.net/threads/accessing-mysql-using-server-ip-address.41057/
+59) https://www.learningjquery.com/2017/09/20-impressive-jquery-plugins-to-replace-the-html-select-box
+60) https://www.sitepoint.com/react-toggle-switch-reusable-component/
+61) https://getbootstrap.com/docs/4.0/examples/
+62) http://loudev.com/#demos
+63) https://crlcu.github.io/multiselect/examples/multiple.html
+64) https://www.tutorialspoint.com/mvc_framework/mvc_framework_folders.htm
+65) https://codeigniter.com/
+66) https://codeigniter.com/user_guide/overview/appflow.html
+67) http://www.mysqltutorial.org/
+
+bootstrap admin panel template links ==>>
+
+68) https://www.bootstrapdash.com/bootstrap-4-admin-templates/
+69) https://www.bootstrapdash.com/demo/azia/v1.0.0/template/dashboard-one.html
+70) http://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/calendar/
+71) http://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_2/#/dashboard
+72) https://www.bootstrapdash.com/product/star-admin-pro/#product-demo-section
+73) http://bootstrapdash.com/demo/plus/jquery/template/demo_1/index.html
+74) http://www.bootstrapdash.com/demo/breeze/jquery/template/demo_1/index.html
+75) https://www.urbanui.com/vanta/template/demo/Emerald/index.html
+76) http://www.urbanui.com/yoraui/template/demo/vertical-default-light/index.html
+77) https://demos.creative-tim.com/material-dashboard-pro-angular2/#/dashboard
+78) http://www.bootstrapdash.com/demo/connect-plus/jquery/template/demo_1/index.html
+79) http://www.urbanui.com/dashflat/template/
+80) https://www.bootstrapdash.com/dark-admin-theme-templates/
+81) http://www.bootstrapdash.com/demo/material-admin-dark/jquery/template/demo_1/index.html
+82) http://www.urbanui.com/fily/template/demo/vertical-default-dark/index.html?ref=web14
+83) http://preview.themeforest.net/item/cloudui-bootstrap-4-admin-template/full_screen_preview/22510768?ref=web14
+84) https://seantheme.com/color-admin/admin/html/index_v3.html?v=4.5
+85) http://demo.adminbootstrap.com/right/1.0.0/
+86) https://www.akveo.com/blur-admin/#/dashboard
+87) https://w3layouts.com/
+88) https://my.w3layouts.com/DownloadTemplate/20794
+=================================================================================
+89) https://code-boxx.com/upload-large-files-php/
+90) https://snakify.org/en/lessons/for_loop_range/
+
+Best Site of course Data ==>>
+
+91) https://medium.com/
+92) 
+
+
+
+								============	Workbanch of Prudigital.in   ===========
+As Designer link -->
+
+
+http://designer.sheenz.in/sourabh/
+http://designer.sheenz.in/sourabh/
+
+````````````````````````````````````````````````````````````````````````````````````````````````
+Attendence Prudigital media url --
+
+link -->>  http://bills.prudigital.net/
+Username -- >  saurabh.shukla@prudigital.in
+password -- >  P@ssw0rd
+
+`````````````````````````````````````````````````````````````````````````````````````````````````
+SMS Panel shneez.in server testing ---..
+
+http://sms.sheenz.in/auth/login
+love@prudigital.in
+12345678
+
+--------------------------------------------------------
+ftp -->  devlopment server ..
+
+FTP Password: assets@123456
+FTP Username: assets@sms.sheenz.in
+FTP server: ftp.sms.sheenz.in
+
+
+FTP Password: views@123456
+FTP Username: views@sms.sheenz.in
+FTP server: ftp.sms.sheenz.in
+
+
+
+`````````````````````````````````````````````````````````````````````````````````````````````````
+https://tutorialdeep.com/bootstrap/bootstrap-table/
+https://github.com/saurabhshukla01/
+http://sms.sheenz.in/templete_html/template/app/template/index.html
+http://sms.sheenz.in/template_implementation/
+https://admin.sms1.in/index.php?Act=contactlist
+http://sms.sheenz.in/template_implementation/template/app/template/index4.html
+
+`````````````````````````````````````````````````````````````````````````````````````````````````
+http://sms.sheenz.in/template_implementation/template/app/template/index4.html
+http://sms.sheenz.in/template_implementation/template/app/template/conversion-reports.html
+
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````````
+https://tutorialdeep.com/bootstrap/bootstrap-table/
+
+###############################################################################################################
+Sms design UI Interface design Implementions ...
+--------------------------------------------------
+urls sms == >>   https://admin.sms1.in/index.php?Act=addapi&pp=12
+username == >>  ziplock2
+Password == >> T7Q435smSi@ds$
+
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````
+show url templates  ==>>   http://sms.sheenz.in/template_implementation/
+show url html files ==>>   http://sms.sheenz.in/template_implementation/template/app/template/index.html
+SMS Design folder ftp ==>>
+
+---------------------------------------------------------------------------------------------------------------
+
+Shukla Ftp Url ===>>
+
+FTP Password: Developer@@123
+FTP Username: shuk@shukla.sheenz.in
+FTP server: ftp.shukla.sheenz.in
+
+link ==>  shukla.sheenz.in
+---------------------------------------------------------------------------------------------------------------
+
+FTP Username: template@sms.sheenz.in
+FTP server: ftp.sms.sheenz.in
+FTP password: template@123456
+
+````````````````````````````````````````````````````````````````````````````````````````````````````````
+# Bootstrap table responsive tutorial ..  
+https://tutorialdeep.com/bootstrap/bootstrap-table/
+
+```````````````````````````````````````````````````````````````````````````````````````````````````````
+free datatable in react.js (frontend devloper) ..
+https://mdbootstrap.com/docs/react/tables/datatables/
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+Sms database ==>>
+------------------------------------
+database -->>
+
+urls --->>  sms.shneez.in/db.php
+username ==>>  sms_usr
+password ==>>  Prudigital@@123
+Database ==>>  sms_db
+
+-------------------------------------
+===============================================================================================================
+
+http://sms.sheenz.in/templete_html/template/app/template/index.html
+
+===============================================================================================================
+https://demo.w3layouts.com/demos_new/template_demo/31-08-2019/match_fix-demo_Free/103107357/web/index.html
+Bootstarp templates --..
+
+=========================================================================================================
+Live Ftp petition ===>>
+-----------------------------
+
+FTP Username: petitionftp@petition.sheenz.in
+FTP server: ftp.petition.sheenz.in
+FTP Password : petition@321
+
+=======================================================================================================
+Bootstarp layout templates  ==>>
+
+https://w3layouts.com/
+
+Bootstarp latest templates ===>>
+
+https://colorlib.com/wp/templates/
+
+=======================================================================================================
+Bootstarp admin panel ==>>
+----------------------------------
+
+file:///C:/Users/Sourabh/AppData/Local/Temp/Rar$EXa17732.6043/Sample%20Admin%20Template/index.html
+
+=============================================================================================
+https://github.com/orgs/Prudigital-media-pvt-ltd/people
+https://sourceforge.net/projects/orangehrm/
+https://sourceforge.net/blog/
+https://sourceforge.net/
+
+Orange_hrm source code ==>>
+github-orangeHRM account ..
+username ==> saurabh24111996
+email ==> saurabh.shukla@prudigital.in
+password ==>  SaurabhShukla@123
+===========================================================================================
+
+new project 5 --  (9/oct/2019)
+urls ==>
+
+----------------------------------------------
+admin panel petition (callupon.org) ..
+----------------------------------------------
+http://admin.petition.sheenz.in/auth/login
+username ==:  kumarlove630@gmail.com
+password ==:  @54321
+--------------------------------------------
+
+(live project link )..
+----------------------------------------------
+https://callupon.org/    
+============================================================================================
+
+Go language -->>
+
+https://golang.org/doc/install?download=go1.13.1.windows-amd64.msi
+
+-------------------------------------
+
+Account fraud ===>>
+
+email -->  kv002021@gmail.com , kv0002021@gmail.com
+passw -->  Saurabh@123 , Saurabh@1234
+
+----------------------------------
+
+facebook account ===>>
+
+fb account  -->  kv002021@gmail.com , kv0002021@gmail.com
+passw -->  Saurabh@123 , Saurabh@1234
+
+
+-----------------------------------------------
+twitter devloper app -  username and password .
+username-@shuklas36627449
+pass-Saurabh@123
+
+------------------------------------------------
+
+@saurabh72451804
+pass- Saurabh@123
+
+-------------------------------------------------
+-----------------------------------------------------------------
+python project -->>
+
+http://185.64.106.145:8000/admin
+username ==>  admin
+pass ==>  123456
+
+---------------------------------
+show use -->
+http://185.64.106.145:8000/shop
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+live loans site -->>
+======================
+http://loans.ezeerupee.com/
+
+
+------------------------------------------------------------------------------------------------------------------
+
+link --->>
+
+http://petition.sheenz.in/
+devlopment server link --->>
+
+HostName :ftp.petition.sheenz.in
+User :petitionftp@petition.sheenz.in
+Pass : Prudigital@1234
+
+
+----------------------------------------------------
+
+http://petition.sheenz.in/db.php
+
+DB Details
+petition_db
+petition_usr
+Prudigital@1234
+
+
+
+HostName :ftp.petition.sheenz.in
+User :petitionftp@petition.sheenz.in
+Pass : Prudigital@1234
+
+
+===================================================================================================================
+
+page ===>>
+https://www.change.org/start-a-petition?step=ask&source_location=homepage_large_button
+
+--------------------------------------------------------------------------------
+local id , TwiterAccount  , Facebook Account  ==>>   nelsonkumar2025@gmail.com
+password ==>>  Tiger@4321
+--------------------------------------------------------------------------------
+
+
+=======================================================================================
+
+url == > http://heysend.sheenz.in/client/auth/login
+username == >  akshay.sharma@gmail.com
+password == > 12345678
+
+=====================================================================================													==================================
+When using mysql in local server then stop the "Services.msc"> stop> then using XXAMMP controler then use the mysql in local host .....
+
+===============================================================================
+
+
+CRM LOGIN -----
+
+http://crm.sheenz.in/auth/login
+kumarlove630@gmail.com	
+@54321
+
+==============================================================================
+
+Create flow chart link ....
+
+https://www.draw.io/
+
+===============================================================
+design link --->>
+
+http://designer.sheenz.in/sourabh/
+
+++++++++++++++++  orangeHRM setup +++++++++++++++++++++++++++++
+start Xampp-controlar ==>>>
+http://localhost/orangehrm-4.3.3/symfony/web/index.php/auth/login
+
+Username :  Admin
+password :  OrangeHRM@1234
+
++++++++++++++++++++++++++++++++++++++++++++++
+
+===========================================================================================================================
+project - 1 )   gogetscore  ftt server  .....
+live project link ==> https://apps.gogetscore.com/
+
+https://apps.gogetscore.com/
+
+design purpose link ==>  1) http://designer.sheenz.in/sourabh/Gogetscore/credit-score.html 
+						2)  http://designer.sheenz.in/sourabh/Gogetscore
+
+
+Local server (devlopment server ... )
+local devlopment link show all website performation .... ??
+=============     http://gogetscore.sheenz.in/
+
+devlopment serevr ===>>  http://gogetscore.sheenz.in/
+
+FTP Username: development@gogetscore.sheenz.in
+FTP server: ftp.gogetscore.sheenz.in
+FTP Password: Gogetscore@@1234
+
+show database gogetscore ====  
+url ==>>  =============   show database link .....
+database check link == >   http://gogetscore.sheenz.in/db.php
+
+information db ...
+'username' => 'goget_usr',
+'password' => 'Prudigital@1234',
+'database' => 'goget_score_db',
+
+===========================================================================================================================
+project -2 )  Heysend  ftp server  .....
+
+live project link ==> http://heysend.in
+
+design purpose link ==>   http://heysend.sheenz.in/admin/clients
+information == >>
+username : kumarlove630@gmail.com
+Password : @54321
+
+
+devlopment link =  http://heysend.sheenz.in/admin/auth/login
+admin user =  admin@gmail.coms
+admin password = @54321
+reseller user = reseller@gmail.com
+reseller password = @54321
+
+
+url == > http://heysend.sheenz.in/client/auth/login
+username == >  akshay.sharma@gmail.com
+password == > 12345678
+
+
+````````````````````````````````````````````````````````````````````
+url == > http://heysend.sheenz.in/admin/auth/login
+username : kumarlove630@gmail.com
+Password : @54321
+
+````````````````````````````````````````````````````````````````````
+
+server devlopment link = http://heysend.sheenz.in
+
+FTP Username: develop@heysend.sheenz.in
+FTP server: ftp.heysend.sheenz.in
+* FTP Password : Heysend@@1234
+FTP Password : love@@12345678
+
+
+
+=============   show database link .....
+database check link == >   http://heysend.sheenz.in/db.php
+
+information db ...
+'username' => 'hey_usr',
+'password' => 'Prudigital)(*123',
+'database' => 'hey_db',
+
+
+==============================================================================================================================
+project - 3 )   Python ftp server .....
+
+FTP Username: user@python.sheenz.in
+FTP Password: Python@123456
+FTP server: ftp.python.sheenz.in
+
+
+
+
+
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+service.msc ==>  mysql ko running service suru krni hai ok ...
+
+if xxamp chla rhe hai to mysql bnd krna pdega ....
+
+--------------------------------------------------
+mysql password on local server ==>>
+
+        'USER': 'root',
+        'PASSWORD': 'Abc@1234',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+
+-------------------------------------------------
+===================================================
+
+soler data in sms panel link --->>
+
+url == >  http://185.64.106.145:8984/solr/
+url log file check in solr ===>>   http://sms.sheenz.in/log.php
+
+
+rabbit MQ  panel ===>>
+
+link url ===>   http://185.64.106.145:15672/
+Admin  ===>    mqadmin
+password  ===>   mqadminpassword
+
+
+================================================================================================================
+Javascript ==>> ---------------
+node code ===>> ---------------
+
+
+
+runscript node  ==>>   npm install package-name --save
+runprogram -->>   node filename.js
+
+
+
+=========================================================================

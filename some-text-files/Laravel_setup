@@ -1,0 +1,1587 @@
+﻿How To install Laravel in Php framework 
+Url Install Laravel :
+
+https://www.phptpoint.com/install-laravel-on-windows/
+https://www.youtube.com/watch?v=FIzcOM6dd5o&list=PLcuqiGkigdex_2ytK5X-HptOJSJ7Mm9bU&index=62
+Step 1
+
+Visit the below-mentioned URL and download composer to install it on your system.
+url :
+https://getcomposer.org/download/
+
+install composer on window 10 …
+Steps : 
+
+“
+https://laravel.com
+Click documentation
+Installing Laravel 
+Composer download
+(dependency manager composer)
+
+Composer -setup.exe
+next->next-> installed successfully 
+”
+
+Open cmd directory of xampp server in htdocs..
+
+Goto cmd open run administrators account : 
+$ composer
+Download updated version of laravel framework in php :
+
+$ composer create -project laravel/laravel laravel “5.1*” 
+Step 2
+After downloading composer, open the command prompt browse to the web server root directory or localhost folder. Well! Hopefully, you already have installed XAMPP or WAMP server in (C:\wamp, open C:\wamp\www)for PHP working environment.
+Goto this url path using cmd :
+$ C:\xampp\htdocs
+Step 3
+Now you need to type the following command to create a new Laravel project using composer.
+$ Composer create-project --prefer-dist laravel/laravel Project-name
+
+Step 4
+If you have done the steps mentioned above carefully and then you need to check whether it is properly working or not and for that, you need to test the installation by opening the following link in your browser.
+
+$  http://Localhost/mylaravel/public/
+		Or
+$  http://Localhost/project-name/public/
+
+View localhost install Laravel or not to check this command .
+
+
+# Note :  By default Index file in public folder in laravel folder.
+
+Url :  localhost/folder-name/public
+Show the view of laravel 5.1 version install or not please check this url..
+
+=================================================================
+			If you change a simple project how to run a simple way then change some values otherwise goto laravel public folder you can access, if you run a simple project then some changes htaccess file move to public folder to main project folder and server.php rename file to index.php file .
+
+Que : 1 
+If a user does not show public directory structure then goto the public folder in the laravel folder on php ?
+
+Ans :  
+cut file   “ .htaccess .php “  in the public folder and paste the laravel folder in the same file .
+
+Laravel folder -> Public folder ->  .htaccess.php
+Change with : Laravel folder -> .htaccess.php
+
+Que :2
+Set the public folder using view purpose then goto the file?
+Ans : move .htaccess file public folder to laravel folder OR project name folder , and 
+Rename server.php file to index.php file .
+
+
+Note : Mostly public folders should not be removed . only just change or rename public_html name . When I am hosting a website not change or remove the htaccess file and public folders.
+===================================================================
+===================================================================
+
+How to Work MVC On Laravel Framework in PHP Code ⇒
+ 
+
+How to create mvc on Laravel Framework : 
+
+View folder path =>
+
+C:\xampp\htdocs\laravel\resources\views
+Create same file (like as hello.blade.php )
+
+Hello.blade.php
+
+<html>
+<head>
+<title>
+Hello Laravel
+</title>
+</head>
+<body>
+<h1> Hello View in Laravel Site </h1>
+</body>
+</html>
+
+
+Controller path =>
+
+C:\xampp\htdocs\laravel\app\Http\Controllers
+Create same file (like as hellocontroller.php)
+
+
+File name : Hellocontroller.php
+
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class Hellocontroller extends controller{
+   public function index(){
+       return view('hello');
+   }
+}
+?>
+C:\xampp\htdocs\laravel\routes\web.php
+
+Create file routes.php oR web.php 
+
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('sayhello','Hellocontroller@index');
+Route::get('/', function () {
+   return view('welcome');
+});
+
+
+Note : 
+Route::get/post(‘function_name’,’controller_class@function_name’);
+
+
+===================================================================
+
+	 Pass Parameter using Get url drop fname value
+
+
+Controller path =>
+
+C:\xampp\htdocs\laravel\app\Http\Controllers
+Create same file (like as hellocontroller.php)
+
+
+File name : Hellocontroller.php
+
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class Hellocontroller extends controller{
+   public function index($fname){
+       //return view('hello');
+       echo "Hello Dear $fname";
+   }
+}
+
+?>
+C:\xampp\htdocs\laravel\routes\web.php
+
+Create file routes.php oR web.php 
+
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+//Route::get('test/{fname}','Hellocontroller@index');
+Route::get('test/{fname}','Hellocontroller@index')->where(['fname'=>"[a-zA-Z]+"]);
+
+
+// not using controller method only use for view purpose alternative way :
+// only send price int value not send another name goto validation of using // route methods (doing some validation using same url of functions)..
+// using validation if url pass ram , ram is not int then validation use on // same url or rotues.php file like as  {->where(['price'=>"[0-9]+"])}
+
+Route::get('demo/{price}', function ($price) {
+   echo "Price is $price";
+})->where(['price'=>"[0-9]+"]);
+
+// Required Parameter of url pass all value print on browser output ..
+Route::get('filter/{min}/{max}', function ($min,$max) {
+   echo "required parameter : man is $min And max is $max";
+});
+
+// optional Parameter of url pass all value print on browser output ..
+Route::get('filter/{max}/{min?}', function ($max,$min='0') {
+   echo "Optional Parameter : max is $max And min is $min";
+});
+
+Route::get('/', function () {
+   return view('welcome');
+});
+
+
+
+Note : 
+Route::get/post(‘function_name’,’controller_class@function_name’);
+
+Check Output ⇒
+ 
+
+Check output ⇒
+Url 1 :  http://localhost/mylaravel/test/saurabh
+Check another output ⇒
+Url 2 : http://localhost/mylaravel/demo/198
+
+Check another output ⇒
+Url 3 : http://localhost/mylaravel/demo/ram/
+
+Output is using validation in the url of rotues.php file then show output is :   Page not Found error.
+
+Check another output ⇒
+Check url using max and min parameter (required) both using this same value :
+Url 4 : http://localhost/mylaravel/filter/12/12233
+
+Check another output ⇒
+Check url using max parameter (optional) using this same value :
+Url 5 : http://localhost/mylaravel/filter/12/
+
+
+
+====================================================================
+
+Middleware In laravel Framework :
+
+
+Middleware path ⇒
+C:\xampp\htdocs\laravel\app\http\middleware folder
+
+Inside create a middleware file using commands : 
+
+Goto cmd > php -v 
+Goto cmd > C:\xampp\htdocs\laravel
+
+Make middleware on using command : 
+Goto project using cmd commands :
+$ Php artisan make : middleware test
+
+C:\xampp\htdocs\laravel > php artisan make:middleware test
+
+Using command run so print massage is  : “ Middleware was created successfully. “
+
+All local ip support any ip (like : ⇒
+$ip == "::1"
+$ip == "127.0.0.1"
+)
+
+Create automatically middleware file (test.php as middleware file.)
+
+
+C:\xampp\htdocs\laravel\app\Http\Middleware\
+
+C:\xampp\htdocs\laravel\app\Http\Middleware\Test.php
+
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+
+class test
+{
+   /**
+    * Handle an incoming request.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  \Closure  $next
+    * @return mixed
+    */
+   public function handle($request, Closure $next)
+   {
+       $ip = $request->ip();
+       if($ip == "::1")    // if($ip == "127.0.0.1")
+        {
+           return redirect('/');
+       }
+       return $next($request);
+   }
+}
+
+
+
+			=====================================
+
+C:\xampp\htdocs\laravel\routes\web.php
+Routes.php Or  web.php
+
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+//Route::get('test/{fname}','Hellocontroller@index');
+Route::get('test/{fname}','Hellocontroller@index')->where(['fname'=>"[a-zA-Z]+"]);
+
+// not using controller method only use for view purpose alternative way :
+
+Route::get('demo/{price}', function ($price) {
+   echo "Price is $price";
+})->where(['price'=>"[0-9]+"]);
+
+// Required Parameter of url pass all value print on browser output ..
+Route::get('filter/{min}/{max}', function ($min,$max) {
+   echo "required parameter : man is $min And max is $max";
+});
+
+// optional Parameter of url pass all value print on browser output ..
+Route::get('filter/{max}/{min?}', function ($max,$min='0') {
+   echo "Optional Parameter : max is $max And min is $min";
+});
+
+Route::get('/', function () {
+   return view('welcome');
+});
+
+//this url using middleware hello url used first middleware after load view
+
+Route::get('hello',function(){
+   return view ('hello');
+})->middleware('test');
+
+?>
+
+
+
+		==================================
+
+Register / Set middleware you create command some change after upload/set middleware file in kernel.php in last one add middleware…
+
+
+Kernel file path : 
+
+C:\xampp\htdocs\laravel\app\Http
+
+Kernel.php ⇒  Define middleware file in kernel.php ..
+
+
+<?php 
+
+/**
+* The application's route middleware.
+*
+* These middleware may be assigned to groups or used individually.
+*
+* @var array
+*/
+protected $routeMiddleware = [
+// define the middleware file name in kernel.php file ..
+   'test' => \App\Http\Middleware\test::class,
+
+];
+
+
+?>
+
+
+Output check using url :
+Url 1 : http://localhost/mylaravel/hello
+Output : run file hello.blade.php inside view folder..
+If a user uses middleware then redirect ip is detected then go to the next redirection page if middleware is driven then redirect another page otherwise the same url call ..
+
+If the middleware calls then http://localhost/mylaravel/hello url is redirected http://localhost/mylaravel/  this url.
+
+Otherwise call the same url http://localhost/mylaravel/hello is http://localhost/mylaravel/hello same link call it the page ..
+
+==============================================================
+
+	 How to create controller in Laravel Framework ⇒
+
+Goto cmd > c:/xampp/htdocs/laravel_project
+
+$ php artisan make:controller Testcontroller
+# controller created successfully.
+
+C:\xampp\htdocs\laravel\app\Http\Controllers
+Testcontroller.php
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TestController extends Controller
+{
+   public function showview(){
+       return view('hello');
+   }
+}
+
+?>
+
+
+			===============================
+
+Web.php Or routes.php
+C:\xampp\htdocs\laravel\routes\web.php
+<?php
+
+Route::get('test','TestController@showview');
+// Route::method('url_name','controller_name@function_name');
+
+?>
+
+
+ Check url : http://localhost/mylaravel/test
+For using output ..
+
+==============================================================
+
+ How to Load Data using controller view and routes file ⇒
+
+
+Using Cmd  >  php artisan make:controller SubjectController
+
+Create automatically controller
+
+SubjectController : (controller send data user create purpose)==>
+
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class SubjectController extends Controller
+{
+   public function index(){
+       $subjects = array('php','python','java','Go','Node');
+       $marks = [12,13,14,15,16];
+       return view('subject')->with(['subjects'=>$subjects,'marks'=>$marks]);
+// return view('subject')->withsubjects($subjects)->withmarks($marks);
+
+   }
+}
+
+?>
+
+
+		======================================
+
+Routes.php  or  web.php  : (url / user create url purpose)==>
+
+<?php
+Route::get('subject','SubjectController@index');
+
+?>
+
+Looking output : url is ⇒
+http://localhost/mylaravel/subject
+Output print array..
+
+		=========================================
+
+
+Views / subject.blade.php ⇒ (view / output purpose) ==>
+
+Subject.blade.php ==>
+
+<html>
+<title>IT Subject</title>
+<body>
+<center><h2>This is All Language in IT software line</h2></center>
+<p><?php print_r($subjects); ?></p>
+<p><?php print_r($marks); ?></p>
+</body>
+</html>
+
+===>
+Output ⇒  url : http://localhost/mylaravel/subject
+This is All Language in IT software line
+Array ( [0] => php [1] => python [2] => java [3] => Go [4] => Node )
+Array ( [0] => 12 [1] => 13 [2] => 14 [3] => 15 [4] => 16 ) 
+			
+
+
+
+
+==============================================================
+
+
+
+How to create View and load header and footer using Laravel ⇒
+
+Blade is a templating engine , it changes some view files using blade keyword load the view file ..?
+
+			=======================================
+
+Using command on cmd make controller :
+
+Cmd > php artisan make:controller ViewController
+
+ViewController :
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ViewController extends Controller
+{
+  public function index(){
+       $subjects = array('php','python','java','Go','Node');
+       $marks = [12,13,14,15,16,17];
+       //return view('subject')->with(['subjects'=>$subjects,'marks'=>$marks]);
+       return view('Testview')->withsubjects($subjects)->withmarks($marks);
+  }
+}
+
+?>
+
+			=========================================
+
+
+On using make directory layout inside a master.blade.php file : 
+
+C:\xampp\htdocs\laravel\resources\views\layout
+Create layout directory using master.blade.php
+
+
+Path : C:\xampp\htdocs\laravel\resources\views\layout\master.blade.php  ⇒
+Create master.blade.php file using header body and footer all add value inside file .
+
+
+<html>
+<head>
+<title>
+The Laravel View
+</title>
+</head>
+<body>
+<h2> This is master header </h2>
+
+<!--   -->
+<!-- use command blade is used yield is using section call there used.-->
+       @yield('body')
+
+<h3> This is master footer </h3>
+</body>
+</html>
+
+
+
+Note :  @yield key is used in master file using the header and footer all extends in the same file then used the yield command.
+
+
+				===========================
+Path : Testview.blade.php ⇒
+C:\xampp\htdocs\laravel\resources\views\Testview.blade.php
+⇒
+
+
+@extends('layout/master')
+
+@section('body')
+
+<center><h2>This is All Language in IT software line</h2></center>
+<p><?php print_r($subjects); ?></p>
+<p><?php print_r($marks); ?></p>
+
+@endsection
+
+				==============================
+
+Routes.php or web.php ⇒
+Path : C:\xampp\htdocs\laravel\routes\web.php
+Code :
+
+
+<?php
+
+Route::get('testview','ViewController@index');
+
+?>
+
+				===============================
+
+
+View output in this url :
+http://localhost/mylaravel/testview
+
+Output ⇒
+Header of master
+Body of controller.php
+Footer of master.
+
+
+=============================================================
+
+How to create script and html data print the next page  ⇒
+
+Using command on cmd make controller :
+
+Cmd > php artisan make:controller ViewController
+
+ViewController :
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ViewController extends Controller
+{
+  public function index(){
+       $subjects = array('php','python','java','Go','Node');
+       $marks = [12,13,14,15,16,17];
+       //return view('subject')->with(['subjects'=>$subjects,'marks'=>$marks]);
+       return view('Testview')->withsubjects($subjects)->withmarks($marks);
+  }
+
+  public function data(){
+       $data1 = '<script> alert("Hello");</script>';
+       $marks = [12,13,14,15,16,17];
+       //return view('subject')->with(['subjects'=>$subjects,'marks'=>$marks]);
+       return view('Testdata')->with('data1',$data1);
+  }
+}
+
+
+?>
+
+
+			=========================================
+
+
+On using make directory layout inside a master.blade.php file : 
+
+C:\xampp\htdocs\laravel\resources\views\layout
+Create layout directory using master.blade.php
+
+
+Path : C:\xampp\htdocs\laravel\resources\views\layout\master.blade.php  ⇒
+Create master.blade.php file using header body and footer all add value inside file .
+
+Code :
+
+<html>
+<head>
+<title>
+The Laravel View
+</title>
+</head>
+<body>
+<h2> This is master header </h2>
+
+<!--  // use command blade is used yield is using section call there is used.  -->
+
+       @yield('body')		<?php //load another section master page ?>
+
+       @yield('bodydata')	<?php //load another section master page ?>
+
+
+<h3> This is master footer </h3>
+</body>
+</html>
+
+
+
+
+Note :  @yield key is used in master file using the header and footer all extends in the same file then used the yield command.
+
+
+				===========================
+
+Path : Testdata.blade.php ⇒
+C:\xampp\htdocs\laravel\resources\views\Testdata.blade.php
+⇒
+
+
+@extends('layout/master')
+
+@section('bodydata')
+
+<center><h2>This is All Language in IT software line</h2></center>
+<p><?php echo $data1; ?></p>   
+<?php // call javascript commannd using php code. ()?>
+<p>{{ $data1 }}</p>              
+<?php // load html data using this one {{ $var }}  (it will not run the scrpit) ?>
+<p>{{!! $data1 !!}} </p>         
+<?php  // load script to use this command syntax . (It will run the script) ?>
+<p> @{{$data1}} </p>              
+<?php // to tell the laravel that this is the not part of larevel part  ?>
+
+@endsection
+
+
+
+				==============================
+
+Routes.php or web.php ⇒
+Path : C:\xampp\htdocs\laravel\routes\web.php
+Code :
+
+
+<?php
+
+Route::get('testdata','ViewController@data');
+
+?>
+
+				===============================
+
+
+
+
+
+
+
+
+
+View output in this url :
+http://localhost/mylaravel/testdata
+
+
+Output ⇒
+Header of master
+Body of controller.php
+(call script
+Call html data
+Call laravel data is not part then using command
+Call script syntax
+Call script syntax is not
+)
+
+Footer of master.
+
+
+==============================================================
+
+
+How to Call If else in Laravel framework using blade command : ⇒
+				================
+
+Path : C:\xampp\htdocs\laravel\resources\views\layout
+Create file
+Master.blade.php ⇒
+ 
+<html>
+<head>
+<title>
+The Laravel View
+</title>
+</head>
+<body>
+<h2> This is master blade header </h2>
+
+<!--  // use command blade is used yield is using section call there is used.  -->
+
+       @yield('body')          <?php //load another section master page ?>
+       @yield('bodyview')      <?php //load another section master page ?>
+       @yield('bodydata')      <?php //load another section master page ?>
+
+<h3> This is master blade footer </h3>
+</body>
+</html>
+
+
+			=========================
+
+
+Path : C:\xampp\htdocs\laravel\resources\views\
+Create File 
+Hello.blade.php ⇒   Code :==>
+
+@extends('layout/master')
+
+@section('bodyview')
+// another way to print the if else condition : 
+<h2>
+{{ $data or 'DATA NOT FOUND'}}  //this syntax is using laravel code
+</h2>
+<p> {{ isset($data)?$data : "Data not found"}}</p> //this is code core php
+
+@endsection
+
+				===================
+
+Path : 
+Create file : 
+hellocontroller.php
+
+
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class Hellocontroller extends controller{
+   public function index($fname){
+       //return view('hello');
+       echo "Hello Dear $fname";
+   }
+   public function data(){
+       $data ="Hello Laravel";
+       return view('hello')->with('data',$data);
+
+   }
+}
+
+?>
+
+
+				====================
+
+Routes.php or web.php ⇒
+Path : C:\xampp\htdocs\laravel\routes\web.php
+Code :
+
+
+<?php
+
+Route::get('helloblade','Hellocontroller@data');
+
+?>
+
+
+
+
+Output ⇒
+Url link : http://localhost/mylaravel/helloblade
+
+Output using the main command output is too good .
+
+=============================================================
+How to call If else and if else condition on Laravel framework : ⇒
+
+Path : C:\xampp\htdocs\laravel\resources\views\layout
+Create file
+Master.blade.php ⇒
+ 
+<html>
+<head>
+<title>
+The Laravel View
+</title>
+</head>
+<body>
+<h2> This is master blade header </h2>
+
+<!--  // use command blade is used yield is using section call there is used.  -->
+
+       @yield('body')          <?php //load another section master page ?>
+       @yield('bodyview')      <?php //load another section master page ?>
+       @yield('bodydata')      <?php //load another section master page ?>
+
+<h3> This is master blade footer </h3>
+</body>
+</html>
+
+
+			=========================
+
+
+Path : C:\xampp\htdocs\laravel\resources\views\
+Create File 
+Hello.blade.php ⇒   Code :==>
+
+@extends('layout/master')
+
+@section('bodyview')
+
+//<h2>
+//{{ $data or 'DATA NOT FOUND'}}
+//</h2>
+//<p> {{ isset($data)?$data : "Data not found"}}</p>
+
+   <?php $u="Data Not found"; ?>
+   @if($data=="Hello")
+       {{ $data }}
+   @elseif($data=="Hi")
+       {{ $data }}
+   @else
+       {{ $u }}
+   @endif
+
+@endsection
+
+
+				===================
+
+Path : 
+Create file : 
+hellocontroller.php
+
+
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class Hellocontroller extends controller{
+   public function index($fname){
+       //return view('hello');
+       echo "Hello Dear $fname";
+   }
+   public function data(){
+       $data ="Hello";
+	// $data ="hi";
+	// $data ="Laravel";
+       return view('hello')->with('data',$data);
+
+   }
+}
+
+?>
+
+
+				====================
+
+Routes.php or web.php ⇒
+Path : C:\xampp\htdocs\laravel\routes\web.php
+Code :
+
+
+<?php
+
+Route::get('helloblade','Hellocontroller@data');
+
+?>
+
+
+
+
+Output ⇒
+Url link : http://localhost/mylaravel/helloblade
+
+Output using the main command output is too good .
+
+
+==============================================================
+
+How to create model and configure database in laravel ⇒
+
+User Define and create sample of database and table after configure database and using laravel framework using php code : 
+
+Create a database user define :
+Urls : http://localhost/phpmyadmin/
+
+Create database  database - name :  Laraveldemo
+Create table table - name : students
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================
+
+Connection of database on Laravel_Project framework how to connect database and configuration of file ⇒
+
+Path to change some file database : 
+
+
+Change of this file and configuration same file :
+C:\xampp\htdocs\laravel\vendor\.env
+
+Code :  
+
+⇒     .env file    ⇒     Some change of file (.env file )
+
+			=================================
+Path : C:\xampp\htdocs\laravel\vendor\.env
+Code : 
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Laraveldemo
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+			======================================
+
+
+Run to cmd command make model on laravel folder : 
+
+Cmd >   cd \xampp\htdocs\laravel
+
+Run command :   $  php artisan make:model student
+
+# Automatically create model students (Model_name ) ..
+
+Students create commands on make models using singular because create a class your model then using singular name of model , and create tables in database is plural because it is a table name ..
+
+
+
+Model create path automatically is laravel project in your model name file inside this path using this commands is :    $  php artisan make:model student
+
+
+Path : 
+model file name is :
+
+C:\xampp\htdocs\laravel\app
+Student.php   ⇒
+
+Create file student.php is ⇒
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class student extends Model
+{
+    //
+}
+
+?>
+
+======================================================================
+
+Insert Data into Database using Model with Depth concepts  ⇒
+
+Create database table inside phpmyadmin :
+
+Add all table 2 fields necessary is craeted_at   And  updated_at ..
+
+Database Laraveldemo & tablename   student ⇒
+
+
+======================================================================
+
+Create controller file  :
+Go to the project directory after run the commands :
+
+Cmd > $  php artisan make:model student
+Cmd > $  php artisan make:controller  modelviewController
+
+
+			---------------------------------------------------------------
+
+Models file  path  :   C:\xampp\htdocs\laravel\app  
+
+Student.php  ⇒
+===========
+Code : 
+
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class student extends Model
+{
+   //
+}
+?>
+
+
+Controller files  path  :  C:\xampp\htdocs\laravel\app\Http\Controllers
+
+Modelviewcontroller.php ⇒
+======================
+
+code :
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\student;
+class modelviewController extends Controller
+{
+   public function index(){
+       $student = new student();
+       $student->sname="Rana Kumar";
+       $student->standerd = 10;
+       $student->save();
+       echo "Data inserted successfully<br>";
+       return view('modelview');
+
+   }
+}
+
+
+?>
+
+			=================================
+ 
+View files path :  C:\xampp\htdocs\laravel\resources\views
+
+Model View.blade.php ⇒
+====================
+
+Code :
+
+
+<html>
+<body>
+model page views ..
+</body>
+</html>
+				======================================
+
+Url files path :  C:\xampp\htdocs\laravel\routes
+
+Web.php ⇒
+=========
+
+Code : 
+
+
+<?php
+
+Route::get('modelview','modelviewController@index');
+
+?>
+
+====================================================================
+
+Urls ⇒  output is  :      http://localhost/mylaravel/modelview
+  
+Data inserted successfully .
+======================================================================
+
+		Another way to inserted data on your database so change some file like controller and model file ⇒
+
+
+Models file  path  :   C:\xampp\htdocs\laravel\app  
+
+Student.php  ⇒
+===========
+Code : 
+
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class student extends Model
+{
+      protected $fillable = ['sname','standerd'];        // using this variable how to fill fields on your database fields so use this variable 
+      public $timestamps = false;                              // only use the field not call timestamps error then use this variable (on your laravel model )
+
+}
+?>
+
+
+Controller files  path  :  C:\xampp\htdocs\laravel\app\Http\Controllers
+
+Modelviewcontroller.php ⇒
+======================
+
+code :
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\student;
+class modelviewController extends Controller
+{
+public function index(){
+   $student = new student(['sname'=>'jiger','standerd'=>'6']);
+   //$student->sname="vijay";
+   //$student->standerd = 10;
+
+   $student->save();
+   echo "Data inserted successfully<br>";
+   return view('modelview');
+
+   }
+}
+
+
+?>
+
+
+			=================================
+
+Note :  Timestamp will not be used then call this is public variable so use the 
+
+Like ex : Public $timestamps = “False”
+No error shows the load database when not using timestamp then handle this one.
+
+Protected $fillable variable is used when you are inserted value on your database use $fillable = [database fields fill on array box define same fields on your database tables matched fields.], 
+Using a protected keyword which calls your file on your database then use this one.
+
+Like ex :   protected $fillable = [‘sname’,’standerd’];
+
+When you are used only one fields in variable fillable then call controller call then add or inserted the fields value and after not define fields value is default set value 
+
+Like that : standard not define then inserted value 
+Standard = 0 by default value.
+
+=============================================================
+
+Create model class with different name then the table name in database ⇒
+Cmd >  $ php artisan make:model  teacher 
+
+
+Models file  path  :   C:\xampp\htdocs\laravel\app  
+
+teacher.php  ⇒
+===========
+Code : 
+
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class teacher extends Model
+{
+   //
+   //protected $fillable = ['sname'];
+   protected $fillable = ['sname','standerd'];
+   public $timestamps = false;
+   protected $table = 'students';
+}
+
+
+
+Controller files  path  :  C:\xampp\htdocs\laravel\app\Http\Controllers
+
+Modelviewcontroller.php ⇒
+======================
+
+code :
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\student;
+use App\teacher;
+class modelviewController extends Controller
+{
+   public function index(){
+       $student = new teacher(['sname'=>'ram','standerd'=>'6']);
+       //$student->sname="vijay";
+       //$student->standerd = 10;
+
+       $student->save();
+       echo "Data inserted successfully<br>";
+       return view('modelview');
+
+   }
+
+}
+
+
+?>
+
+
+
+Note : call the different model teacher but not use another table teacher. Previous table students call the make new model file .
+
+======================================================================
+Youtube link : https://www.youtube.com/watch?v=znZRWhbwe9k&list=PLcuqiGkigdex_2ytK5X-HptOJSJ7Mm9bU&index=78
+
+What is a Request object ? Most important to understand before form submission ⇒
+
+
+
+dd() function is used to stop function value on the same line
+dd()  means die and dump value on the same line.
+
+
+Use modal viewController file :
+
+Code ⇒
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\student;
+use App\teacher;
+use Illuminate\routes;     // set the url path
+
+class modelviewController extends Controller
+{
+   public function index(){
+       $student = new teacher(['sname'=>'ram','standerd'=>'6']);
+       //$student->sname="vijay";
+       //$student->standerd = 10;
+
+       $student->save();
+       echo "Data inserted successfully<br>";
+       //return view('modelview');
+
+   }
+   public function data(Request $request){
+       //dd($request->name);       // print one parameter user get it easy
+       //dd($request->all());       // print all value user print url after ? symbol so you can used
+       // echo $request->get('name');                  // user enter the name of url then pass first parameter
+       echo $request->get('name','Name is not entered');        // direct request method printed when user not enter name then call to second parameter
+       //dd($request);                // print all method used request commands
+   }
+
+}
+
+
+?>
+
+
+
+	=====================================================
+
+Url define path file  : routes.php or web.php
+
+<?php
+	Route::get('modelview1','modelviewController@data');
+
+?>
+			===================================
+
+Check output is url  : 1  &  2 both urls ⇒
+http://localhost/mylaravel/modelview1?name=ram&classs=12
+http://localhost/mylaravel/modelview1?&classs=12
+
+Get method user post parameter using the url link ..
+
+Use dd method under function data die and dump used.
+
+=============================================================
+
+(Cross Site Request Forgery) CSRF Token with Form (Cross Site Request Forgery) ⇒
+
+Urls : https://www.youtube.com/watch?v=cnbbsx4NqbI&list=PLcuqiGkigdex_2ytK5X-HptOJSJ7Mm9bU&index=79
+
+
+Run command of cmd project Laravel directory : 
+
+C:\xampp\htdocs\laravel>
+$ php artisan make:controller contactcontroller
+
+Automatically create contactcontroller  ⇒
+
+Controller path is  ⇒ C:\xampp\htdocs\laravel\app\Http\Controllers
+Contactcontroller.php 
+
+Code : 
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+
+class contactcontoller extends Controller
+{
+   public function index(){
+
+        return view('contact');
+   }
+
+   public function store(Request $request){
+
+       dd($request->all());
+   }
+}
+?>
+
+
+
+			===========================================
+
+Create file html inside view folders ⇒
+
+Path of html file inside views folder : ⇒
+C:\xampp\htdocs\laravel\resources\views
+
+Create user define name is :   
+
+ Contact.blade.php  ⇒
+
+Code :
+
+
+<from action="{{ route('contactstore') }}" method="POST">
+   {{ csrf_field() }}
+   <label for="name"> Username </label>
+   <input type="text" name="name">
+   <input type="submit" value="submit">
+</form>
+
+
+
+
+			===========================================
+
+Web.php (url files ) : 
+
+Route::get('form','contactcontoller@index');
+Route::post('contact','contactcontoller@store')->name('contactstore');
+
+
+
+======================================================================
+
+
+How to create form validation login page in Laravel using php code : ⇒
+
+Run command  : 
+C:\xampp\htdocs\laravel >php artisan make:controller ValidationController
+$ php artisan make:controller ValidationController
+
+==========================================
+
+
+
+Path : 
+Views\login.blade.php ⇒
+
+Code : ⇒
+
+
+<html>
+     <head>
+       <title>Login Form</title>
+     </head>
+
+     <body>
+
+       @if (count($errors) > 0)
+         <div style="color:red;">
+           <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+           </ul>
+         </div>
+       @endif
+
+       <form method="post" action="">
+        @csrf
+          <div>
+             Username:<input type="text" name="username"><br>
+          </div>
+          <div class="form-group">
+             Password:<input type="password" name="password"><br>
+          </div>
+          <button type="submit">Login</button>
+       </form>
+
+     </body>
+  </html>
+
+===========================================================
+
+Path :  Http\controller  
+
+ValidationController.php ⇒
+
+Code : 
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+/*
+class ValidationController extends Controller {
+     public function form() {
+        return view('login');
+     }
+     public function validateform(Request $request) {
+        print_r($request->all());
+        $this->validate($request,[
+           'username'=>'required|max:8',
+           'password'=>'required'
+          ]);
+         }
+     }
+
+*/
+
+
+    class ValidationController extends Controller {
+     public function form() {
+        return view('login');
+     }
+     public function validateform(Request $request) {
+        print_r($request->all());
+
+        $custom = [
+        'username.required'=>'Please fill up the username field',
+        'password.required'=>'Please fill up the password field'
+        ];
+
+        $this->validate($request,[
+           'username'=>'required|max:8',
+           'password'=>'required'
+          ], $custom);
+         }
+     }
+
+
+========================================
+
+
+Path : Url path ⇒
+
+Rotues\web.php  ⇒
+
+Web.php  ⇒
+
+<?php
+
+Route::get('/validation','ValidationController@form');
+Route::post('/validation','ValidationController@validateform');
+
+?>
+
+==================================
+
+Output ⇒    http://localhost/mylaravel/validation
+
+====================================================================
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PruDigital SMS Panel-</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <style>
+      .pull-right {
+      float: right !important;
+      }
+      .dataTables_wrapper .dataTables_filter {
+         float: right;
+         text-align: right;
+         }
+         table{
+         margin:10px;
+         }
+   </style>
+   <body>
+      <table width="100%" border="0">
+         <tbody>
+            <tr>
+               <td width="5%" valign="middle" height="21" align="left"><img src="C:\Users\Sourabh\Desktop\SMS_design\images\icon-statistics-large.png" width="50" height="50"></td>
+               <td width="95%" valign="middle" align="left">
+                  <h3 class="noBreadcrumb">Reports / Statistics</h3>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <hr>
+      <div class="content-wrapper">
+         <div class="box-header with-border">
+            <div class="col-md-12">
+               <h2 class="box-title">&nbsp;<strong style="color:#222;font-size:16px;">Quick Reports</strong></h2>
+               <div class="pull-right">
+                  <button type="button" class="btn-info export">Export</button>
+               </div>
+               <hr>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="input-group">
+                        <span class="input-group-btn"><button class="btn">Campaign</button></span>
+                        <select class="form-control selectpicker" id="" data-live-search="true"  data-size="10">
+                           <option value="all">All Campaign</option>
+                           <option data-tokens="hello" value="399">hello</option>
+                           <option data-tokens="Testing" value="398">Testing</option>
+                           <option data-tokens="Poket_Bajaj FD_25 Oct" value="397">Poket_Bajaj FD_25 Oct</option>
+                           <option data-tokens="Gtech_Kotak_02 Sept_5_20" value="396">Gtech_Kotak_02 Sept_5_20</option>
+                           <option data-tokens="Gtech_Kotak_02 Sept_5_19" value="395">Gtech_Kotak_02 Sept_5_19</option>
+                           <option data-tokens="Gtech_Kotak_02 Sept_5_10_9" value="394">Gtech_Kotak_02 Sept_5_10_9</option>
+                           <option data-tokens="Apoxy_Leo Vages" value="393">Apoxy_Leo Vages</option>
+                           <option data-tokens="Vcomm_Omnia Casino_24 Oct" value="392">Vcomm_Omnia Casino_24 Oct</option>
+                           <option data-tokens="Vcomm_SportsBet_24 Oct" value="391">Vcomm_SportsBet_24 Oct</option>
+                           <option data-tokens="Intellect_Medlife_23 Oct" value="390">Intellect_Medlife_23 Oct</option>
+                           <option data-tokens="Netcore_Kissht_22 Oct" value="389">Netcore_Kissht_22 Oct</option>
+                           <option data-tokens="Love_Campaign_21 Oct" value="388">Love_Campaign_21 Oct</option>
+                           <option data-tokens="Adsplay_Pokar Star_19 Oct" value="387">Adsplay_Pokar Star_19 Oct</option>
+                           <option data-tokens="Pru_Adda52_19 Oct" value="386">Pru_Adda52_19 Oct</option>
+                           <option data-tokens="CLEAR SCORE LIVE - 804_vibhaw" value="5">CLEAR SCORE LIVE - 804_vibhaw</option>
+                           <option data-tokens="CLEARSCOR" value="4">CLEARSCOR</option>
+                           <option data-tokens="CAMP2" value="3">CAMP2</option>
+                           <option data-tokens="CAMP1" value="2">CAMP1</option>
+                           <option data-tokens="Vibhaw" value="1">Vibhaw</option>-->
+                        </select>
+                        <div class="box-tools pull-right col-md-6">
+                           <div id="" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                              <i class="fa fa-calendar"></i>&nbsp;
+                              <span>30 October 2019 - 30 October 2019</span> <i class="fa fa-caret-down"></i>
+                           </div>
+                           <br>
+                           <br>
+                        </div>
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-8 col-md-12">
+                              <div id="myData_wrapper" class="dataTables_wrapper no-footer">
+                                 <div class="dataTables_length" id="">
+                                    <label>
+                                       Show 
+                                       <select name="myData_length" aria-controls="myData" class="">
+                                          <option value="10">10</option>
+                                          <option value="50">50</option>
+                                          <option value="-1">All</option>
+                                       </select>
+                                       entries
+                                    </label>
+                                    <div id="" class="dataTables_filter">
+                                       <label>Search:<input type="search" class="" placeholder="" aria-controls="myData"></label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+                           <table class="table table-striped table-bordered dataTable no-footer" id="" role="grid" aria-describedby="" style="width:auto;">
+                              <thead>
+                                 <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-sort="ascending" aria-label="Campaign ID: activate to sort column descending">Campaign ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-label="Campaign Name: activate to sort column descending">Campaign Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: width: 100%;" aria-label="Template Name: activate to sort column descending">Template Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-label="SMS API Name: activate to sort column descending">SMS API Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-label="Sender ID Name: activate to sort column descending">Sender ID Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-label="Mobile Number: activate to sort column descending">Mobile Number</th>
+                                    <th class="sorting" tabindex="0" aria-controls="ajaxtable" rowspan="1" colspan="1" style="width: 100%;" aria-label="Click Date: activate to sort column descending">Click Date</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="odd">
+                                    <td colspan="7" class="dataTables_empty" valign="top">No data available in table</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <div class="container">
+                              <div class="row">
+                                 <div class="dataTables_info col-md-8" id="">Showing 0 to 0 of 0 entries</div>
+                                 <div class="dataTables_paginate paging_full_numbers col-md-4" id="">
+                                    <a class="paginate_button first disabled" aria-controls="ajaxtable" data-dt-idx="0" tabindex="0" id="ajaxtable_first">First</a>
+                                    <a class="paginate_button previous disabled" aria-controls="ajaxtable" data-dt-idx="1" tabindex="0" id="ajaxtable_previous">Previous</a>
+                                    <span></span>
+                                    <a class="paginate_button next disabled" aria-controls="ajaxtable" data-dt-idx="2" tabindex="0" id="ajaxtable_next">Next</a>
+                                    <a class="paginate_button last disabled" aria-controls="ajaxtable" data-dt-idx="3" tabindex="0" id="ajaxtable_last">Last</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

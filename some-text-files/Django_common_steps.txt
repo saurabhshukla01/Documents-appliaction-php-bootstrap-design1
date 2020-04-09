@@ -1,0 +1,44 @@
+													Steps Django  ---
+
+											===================================
+
+step1 -    Create project in django ...
+$ django-admin startproject ProjectName 
+
+step2 -  Goto dir of project ..
+$ cd ProjectName
+Create app ...
+$ py manage.py startapp Appname
+# settings.py ==>  Installed apps  add  -   Appname (registerd)
+
+step3 - Create Directory templates
+# settings.py ==>  DIR - 'templates'   (registred)
+
+step4 - All files full in values ...
+views.py ==>>  create function
+filters.py (create)
+$ pip install django filters
+$ pip install Pillow  (for images )
+models.py ==>    create models in class 
+filters.py ==>   filled in python
+$ py manage.py makemigrations
+$ py manage.py migrate
+$ py manage.py runserver
+
+step5 - Create Directory static
+# settings.py ==> registed static Path
+
+step6 - 
+ProjectName/urls.py ==>   Include urls path ...
+
+step7 - 
+Appname/urls.py(create)
+doing path define 
+
+step8 - 
+static ===>>    Images , Js , Css , Bootstrp , Puluign , pages , custom.js , ckeditor  (folder create and add all values inside)
+
+step9 - 
+templates/admin(create) ===>>  admin all html files store (header , form , base , base_site , list , list_change.html )
+
+step10 - 

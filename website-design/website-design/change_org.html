@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Change.Org</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   </head>
+   <body style="background-color: rgba(128,128,255,0.7) ; font-size:16px ; color: black; font-family: masqualero,aria-label">
+      <header>
+         <div class="container-fluid">
+            <div class="row bg-light">
+               <div class="col-md-8">
+                  <nav class="navbar navbar-expand-sm fixed-top">
+                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                           <strong><a class="nav-link" href="#"><span>Change.org</span></a></strong>
+                        </li>
+                        <li class="nav-item">
+                           <strong><a class="nav-link" href="#">Start a petition</a></strong>
+                        </li>
+                        <li class="nav-item">
+                           <strong><a class="nav-link" href="#">My petitions</a></strong>
+                        </li>
+                        <li class="nav-item">
+                           <strong><a class="nav-link" href="#">Browse</a></strong>
+                        </li>
+                        <li class="nav-item">
+                           <strong><a class="nav-link" href="#">Support Change.org India</a></strong>
+                        </li>
+                        <!--<li><a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Login</a></li>-->
+                        <li class="nav-item"><button class="btn btn-secondary">Login</button></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="col-md-4 p-3">
+                  <form class="form-inline" action="">
+                     <input class="form-control" type="text" placeholder="Search">
+                     <button class="btn btn-success" type="submit">Search</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </header>
+      <hr>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+            <li data-target="#demo" data-slide-to="5"></li>
+         </ul>
+         <!-- The slideshow -->
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="images\banner1.jpg" alt="banner1">
+            </div>
+            <div class="carousel-item">
+               <img src="images\banner6.jpg" alt="banner6">
+            </div>
+            <div class="carousel-item">
+               <img src="images\light-banner1.jpg" alt="banner3">
+            </div>
+            <div class="carousel-item">
+               <img src="images\banner4.jpg" alt="banner4">
+            </div>
+            <div class="carousel-item">
+               <img src="images\banner5.jpg" alt="banner5">
+            </div>
+            <div class="carousel-item">
+               <img src="images\banner6.jpg" alt="banner6">
+            </div>
+         </div>
+         <!-- Left and right controls -->
+         <a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#demo" data-slide="next">
+         <span class="carousel-control-next-icon"></span>
+         </a>
+      </div>
+      <hr>
+      <div class="container-fluid">
+      <div class="container">
+         <center>
+            <h3><u>Student form And Details</u></h3>
+         </center>
+         <br>
+         <form action="#">
+            <!--<div class="form-group">
+               <label for="username">Username :</label>
+               <input type="username" class="form-control" id="username" placeholder="Enter Valid Username" name="username">
+               </div>
+               <div class="form-group">
+               <label for="name">Full Name :</label>
+               <input type="text" class="form-control" id="name" placeholder="Enter Valid Full Name" name="fullname">
+               </div>
+               <div class="form-group">
+               <label for="mob">Mobile Number :</label>
+               <input type="text" class="form-control" id="mobile" placeholder="Enter Valid Mobile" name="mobile">
+               </div>
+               <div class="form-group">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" id="email" placeholder="Enter Valid Email " name="email">
+               </div>
+               <div class="form-group">
+               <label for="pwd">Password:</label>
+               <input type="password" class="form-control" id="pwd" placeholder="Enter Valid password" name="pswd">
+               </div>
+               <div class="form-group">
+               <label for="cpwd">Confirm Password:</label>
+               <input type="password" class="form-control" id="cpwd" placeholder="Enter Confirm Password" name="cpswd">
+               </div>
+               <div class="form-group form-check">
+               <label class="form-check-label">
+               <input class="form-check-input" type="checkbox" name="remember"> Check Form
+               </label>
+               </div>-->
+            <div class="row">
+               <div class="col-md-6 form-group" id="AG-Details">
+                  <label for="AG" class="col-form-label">Date of Birth :</label>
+                  <input type="date" class="form-control" id="AG" name="AG" placeholder="MM/DD/YYY">
+               </div>
+               <div class="col-md-6 form-group" id="MI-Details">
+                  <label for="MI" class="col-form-label">Monthly Income :</label>
+                  <input type="text" class="form-control" id="MI" name="MI">
+               </div>
+               <div class="col-md-6 form-group" id="ET-Details">
+                  <label for="ET" class="col-form-label">Employment Type :</label>
+                  <select class="myselect" id="ET" name="ET" style="width:100%;">
+                  </select>
+               </div>
+               <div class="col-md-6 form-group" id="RT-Details">
+                  <label for="RT" class="col-form-label">Residence Type :</label>
+                  <select class="myselect" id="RT" name="RT" style="width:100%;">
+                  </select>
+               </div>
+               <div class="col-md-6 form-group" id="BA-Details">
+                  <label for="BA" class="col-form-label">Bank Account :</label>
+                  <select class="myselect" id="BA" name="BA" style="width:100%;">
+                  </select>
+               </div>
+               <div class="col-md-6 form-group" id="CT-Details">
+                  <label for="CT" class="col-form-label">City :</label>
+                  <select class="myselect" id="CT" name="CT" style="width:100%;">
+                  </select>
+               </div>
+               <div class="col-md-6 form-group" id="CN-Details">
+                  <label for="CN" class="col-form-label">Company Name :</label>
+                  <input type="text" class="form-control" id="CN" name="CN">
+               </div>
+               <div class="col-md-6 form-group" id="YJ-Details">
+                  <label for="YJ" class="col-form-label">Year of Joining :</label>
+                  <input type="date" class="form-control" id="YJ" name="YJ">
+               </div>
+               <div class="col-md-6 form-group" id="MS-Details">
+                  <label for="MS" class="col-form-label">Monthly Salary :</label>
+                  <input type="text" class="form-control" id="MS" name="MS">
+               </div>
+               <div class="col-md-6 form-group" id="EM-Details">
+                  <label for="EM" class="col-form-label">Total EMI :</label>
+                  <input type="text" class="form-control" id="EM" name="EM">
+               </div>
+               <div class="col-md-6 form-group" id="LA-Details">
+                  <label for="LA" class="col-form-label">Loan Amount :</label>
+                  <input type="text" class="form-control" id="LA" name="LA">
+               </div>
+               <div class="col-md-6 form-group" id="TE-Details">
+                  <label for="TE" class="col-form-label">Loan Tenure :</label>
+                  <input type="text" class="form-control" id="TE" name="TE">
+               </div>
+               <div class="col-md-6 form-group" id="EX-Details">
+                  <label for="EX" class="col-form-label">Total Experience :</label>
+                  <input type="text" class="form-control" id="EX" name="EX">
+               </div>
+               <div class="col-md-6 form-group" id="MN-Details">
+                  <label for="MN" class="col-form-label">Mobile Number :</label>
+                  <input type="text" class="form-control" id="MN" name="MN">
+               </div>
+               <div class="col-md-6 form-group" id="FN-Details">
+                  <label for="FN" class="col-form-label"> Full Name :</label>
+                  <input type="text" class="form-control" id="FN" name="FN">
+               </div>
+               <div class="col-md-6 form-group" id="FN-Details">
+                  <label for="FtN" class="col-form-label"> Father's Name :</label>
+                  <input type="text" class="form-control" id="FtN" name="FtN">
+               </div>
+               <div class="col-md-6 form-group" id="FN-Details">
+                  <label for="Add" class="col-form-label"> Full Address :</label>
+                  <input type="text" class="form-control" id="FN" name="FN">
+               </div>
+               <div class="col-md-6 form-group" id="FN-Details">
+                  <label for="pc" class="col-form-label"> Pincode :</label>
+                  <input type="text" class="form-control" id="pc" name="pc">
+               </div>
+               <!--<input type="hidden" name="product_uid" id="product_uid" value="">--> 
+               <div class="p-3">
+                  <button type="submit" class="btn btn-info">Close</button>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#student-form">
+                  Save
+                  </button>
+               </div>
+               <!-- Modal -->
+               <div class="modal fade" id="student-form" tabindex="-1" role="dialog" aria-labelledby="student-form-Label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title" id="student-form-Label">Modal title</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row">
+                              <div class="col-md-6 form-group" id="AG-Details">
+                                 <label for="AG" class="col-form-label">Date of Birth :</label>
+                                 <input type="date" class="form-control" id="AG" name="AG" placeholder="MM/DD/YYY">
+                              </div>
+                              <div class="col-md-6 form-group" id="MI-Details">
+                                 <label for="MI" class="col-form-label">Monthly Income :</label>
+                                 <input type="text" class="form-control" id="MI" name="MI">
+                              </div>
+                              <div class="col-md-6 form-group" id="ET-Details">
+                                 <label for="ET" class="col-form-label">Employment Type :</label>
+                                 <select class="myselect" id="ET" name="ET" style="width:100%;">
+                                 </select>
+                              </div>
+                              <div class="col-md-6 form-group" id="RT-Details">
+                                 <label for="RT" class="col-form-label">Residence Type :</label>
+                                 <select class="myselect" id="RT" name="RT" style="width:100%;">
+                                 </select>
+                              </div>
+                              <div class="col-md-6 form-group" id="BA-Details">
+                                 <label for="BA" class="col-form-label">Bank Account :</label>
+                                 <select class="myselect" id="BA" name="BA" style="width:100%;">
+                                 </select>
+                              </div>
+                              <div class="col-md-6 form-group" id="CT-Details">
+                                 <label for="CT" class="col-form-label">City :</label>
+                                 <select class="myselect" id="CT" name="CT" style="width:100%;">
+                                 </select>
+                              </div>
+                              <div class="col-md-6 form-group" id="CN-Details">
+                                 <label for="CN" class="col-form-label">Company Name :</label>
+                                 <input type="text" class="form-control" id="CN" name="CN">
+                              </div>
+                              <div class="col-md-6 form-group" id="YJ-Details">
+                                 <label for="YJ" class="col-form-label">Year of Joining :</label>
+                                 <input type="date" class="form-control" id="YJ" name="YJ">
+                              </div>
+                              <div class="col-md-6 form-group" id="MS-Details">
+                                 <label for="MS" class="col-form-label">Monthly Salary :</label>
+                                 <input type="text" class="form-control" id="MS" name="MS">
+                              </div>
+                              <div class="col-md-6 form-group" id="EM-Details">
+                                 <label for="EM" class="col-form-label">Total EMI :</label>
+                                 <input type="text" class="form-control" id="EM" name="EM">
+                              </div>
+                              <div class="col-md-6 form-group" id="LA-Details">
+                                 <label for="LA" class="col-form-label">Loan Amount :</label>
+                                 <input type="text" class="form-control" id="LA" name="LA">
+                              </div>
+                              <div class="col-md-6 form-group" id="TE-Details">
+                                 <label for="TE" class="col-form-label">Loan Tenure :</label>
+                                 <input type="text" class="form-control" id="TE" name="TE">
+                              </div>
+                              <div class="col-md-6 form-group" id="EX-Details">
+                                 <label for="EX" class="col-form-label">Total Experience :</label>
+                                 <input type="text" class="form-control" id="EX" name="EX">
+                              </div>
+                              <div class="col-md-6 form-group" id="MN-Details">
+                                 <label for="MN" class="col-form-label">Mobile Number :</label>
+                                 <input type="text" class="form-control" id="MN" name="MN">
+                              </div>
+                              <div class="col-md-6 form-group" id="FN-Details">
+                                 <label for="FN" class="col-form-label"> Full Name :</label>
+                                 <input type="text" class="form-control" id="FN" name="FN">
+                              </div>
+                              <div class="col-md-6 form-group" id="FN-Details">
+                                 <label for="FtN" class="col-form-label"> Father's Name :</label>
+                                 <input type="text" class="form-control" id="FtN" name="FtN">
+                              </div>
+                              <div class="col-md-6 form-group" id="FN-Details">
+                                 <label for="Add" class="col-form-label"> Full Address :</label>
+                                 <input type="text" class="form-control" id="FN" name="FN">
+                              </div>
+                              <div class="col-md-6 form-group" id="FN-Details">
+                                 <label for="pc" class="col-form-label"> Pincode :</label>
+                                 <input type="text" class="form-control" id="pc" name="pc">
+                              </div>
+                              <!--<input type="hidden" name="product_uid" id="product_uid" value="">-->
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+         </form>
+         </div>
+      </div>
+      <hr>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col" style="background-color:lightblue;">
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="col" style="background-color:purple;">
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="col" style="background-color:orange">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+            <div class="col" style="background-color:blue;">
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+         </div>
+      </div>
+      <hr>
+      <center>
+         <h3><u>Google Icon Table</u></h3>
+      </center>
+      <div class="container">
+         <br> <br>
+         <body>
+            <table class="table table-bordered">
+               <!-- table class .table-bordered -->
+               <thead>
+                  <tr>
+                     <th>Sequence</th>
+                     <th>Icon Category</th>
+                     <th>Icon Example</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row">1</th>
+                     <td>41 New Icons in 4.7</td>
+                     <td><i class="fa fa-address-book-o" aria-hidden="true"></i> </td>
+                  </tr>
+                  <tr>
+                     <th scope="row">2</th>
+                     <td>Web Application Icons</td>
+                     <td><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">3</th>
+                     <td>Accessibility Icons</td>
+                     <td><i class="fa fa-volume-control-phone" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">4</th>
+                     <td>Hand Icons</td>
+                     <td><i class="fa fa-hand-o-right" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">5</th>
+                     <td>Transportation Icons</td>
+                     <td><i class="fa fa-ship" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">6</th>
+                     <td>Gender Icons</td>
+                     <td><i class="fa fa-venus-double" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">7</th>
+                     <td>Spinner Icons</td>
+                     <td><i class="fa fa-spinner" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">7</th>
+                     <td>Form Control Icons</td>
+                     <td><i class="fa fa-plus-square" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">8</th>
+                     <td>Payment Icons</td>
+                     <td><i class="fa fa-cc-mastercard" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">9</th>
+                     <td>Chart Icons</td>
+                     <td><i class="fa fa-area-chart" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">10</th>
+                     <td>Currency Icons</td>
+                     <td><i class="fa fa-inr" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">11</th>
+                     <td>Text Editor Icons</td>
+                     <td><i class="fa fa-files-o" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">12</th>
+                     <td>Directional Icons</td>
+                     <td><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">13</th>
+                     <td>Video Player Icons</td>
+                     <td><i class="fa fa-youtube-play" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">14</th>
+                     <td>Brand Icons</td>
+                     <td><i class="fa fa-amazon" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                     <th scope="row">15</th>
+                     <td>Medical Icons</td>
+                     <td><i class="fa fa-h-square" aria-hidden="true"></i></td>
+                  </tr>
+               </tbody>
+            </table>
+            <br> <br>
+      </div>
+      <hr>
+      <!--==========================
+         About Us Section
+         ============================-->
+      <section id="about">
+      <div class="container">
+      <div class="row">
+      <div class="col-lg-5 col-md-6">
+      <div class="about-img">
+      <img src="images/about-img.jpg" alt="about-img" width=450px ; height=450px;>
+      </div>
+      </div>
+      <div class="col-lg-7 col-md-6">
+      <div class="about-content">
+      <h2>About Us</h2>
+      <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+      <ul>
+      <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+      <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+      <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #about -->
+      <!--==========================
+         Services Section
+         ============================-->
+      <section id="services" class="section-bg">
+      <div class="container">
+      <header class="section-header">
+      <h3>Services</h3>
+      <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+      </header>
+      <div class="row">
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+      <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+      <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+      </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+      <h4 class="title"><a href="">Dolor Sitema</a></h4>
+      <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+      </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+      <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+      <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+      </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+      <h4 class="title"><a href="">Magni Dolores</a></h4>
+      <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+      <h4 class="title"><a href="">Nemo Enim</a></h4>
+      <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+      </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+      <div class="box">
+      <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+      <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+      <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #services -->
+      <!--==========================
+         Why Us Section
+         ============================-->
+      <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+      <header class="section-header">
+      <h3>Why choose us?</h3>
+      <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+      </header>
+      <div class="row">
+      <div class="col-lg-6">
+      <div class="why-us-img">
+      <img src="images/why-us.jpg" alt="" class="img-fluid">
+      </div>
+      </div>
+      <div class="col-lg-6">
+      <div class="why-us-content">
+      <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
+      <p>
+      Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
+      et temporibus. Labore est odio.
+      Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
+      </p>
+      <div class="features wow bounceInUp clearfix">
+      <i class="fa fa-diamond" style="color: #f058dc;"></i>
+      <h4>Corporis dolorem</h4>
+      <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
+      </div>
+      <div class="features wow bounceInUp clearfix">
+      <i class="fa fa-object-group" style="color: #ffb774;"></i>
+      <h4>Eum ut aspernatur</h4>
+      <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
+      </div>
+      <div class="features wow bounceInUp clearfix">
+      <i class="fa fa-language" style="color: #589af1;"></i>
+      <h4>Voluptates dolores</h4>
+      <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="container">
+      <div class="row counters">
+      <div class="col-lg-3 col-6 text-center">
+      <span data-toggle="counter-up" style="font-size: 30px"><strong>274</strong></span>
+      <p>Clients</p>
+      </div>
+      <div class="col-lg-3 col-6 text-center">
+      <span data-toggle="counter-up" style="font-size: 30px"><strong>421</strong></span>
+      <p>Projects</p>
+      </div>
+      <div class="col-lg-3 col-6 text-center">
+      <span data-toggle="counter-up" style="font-size: 30px"><strong>1,364</strong></span>
+      <p>Hours Of Support</p>
+      </div>
+      <div class="col-lg-3 col-6 text-center">
+      <span data-toggle="counter-up" style="font-size: 30px"><strong>18</strong></span>
+      <p>Hard Workers</p>
+      </div>
+      </div>
+      </div>
+      </section>
+      <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+      <div class="row">
+      <div class="col-lg-9 text-center text-lg-left">
+      <h3 class="cta-title">Call To Action</h3>
+      <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-lg-3 cta-btn-container text-center">
+      <a class="cta-btn align-middle" href="#">Call To Action</a>
+      </div>
+      </div>
+      </div>
+      </section><!-- #call-to-action -->
+      <!--==========================
+         Features Section
+         ============================-->
+      <section id="features">
+      <div class="container">
+      <div class="row feature-item">
+      <div class="col-lg-6 wow fadeInUp">
+      <img src="images/Flower2.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+      <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+      <p>
+      Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+      </p>
+      <p>
+      Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+      </p>
+      </div>
+      </div>
+      <div class="row feature-item mt-5 pt-5">
+      <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+      <img src="images/flower3.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+      <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+      <p>
+      Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+      </p>
+      <p>
+      Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+      </p>
+      <p>
+      Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+      </p>
+      </div>
+      </div>
+      </div>
+      </section><!-- #about -->
+      <!--==========================
+         Portfolio Section
+         ============================-->
+      <section id="portfolio" class="section-bg">
+      <div class="container">
+      <header class="section-header">
+      <h3 class="section-title">Our Portfolio</h3>
+      </header>
+      <div class="row">
+      <div class="col-lg-12">
+      <ul id="portfolio-flters">
+      <li data-filter="*" class="filter-active">All</li>
+      <li data-filter=".filter-app">App</li>
+      <li data-filter=".filter-card">Card</li>
+      <li data-filter=".filter-web">Web</li>
+      </ul>
+      </div>
+      </div>
+      <div class="row portfolio-container">
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+      <div class="portfolio-wrap">
+      <img src="images/flower2.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">App 1</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+      <div class="portfolio-wrap">
+      <img src="images/flower2.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Web 3</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="/assets/img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+      <div class="portfolio-wrap">
+      <img src="images/flower2.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">App 2</a></h4>
+      <p>TContent writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+      <div class="portfolio-wrap">
+      <img src="images/flower1.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Card 2</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+      <div class="portfolio-wrap">
+      <img src="images/flower1.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Web 2</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+      <div class="portfolio-wrap">
+      <img src="images/flower1.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">App 3</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+      <div class="portfolio-wrap">
+      <img src="images/flower3.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Card 1</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+      <div class="portfolio-wrap">
+      <img src="images/flower3.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Card 3</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+      <div class="portfolio-wrap">
+      <img src="images/flower3.jpg" class="img-fluid" alt="">
+      <div class="portfolio-info">
+      <h4><a href="#">Web 1</a></h4>
+      <p>Content writers are professional writers who produce engaging content for use online. They're Internet-savvy individuals who create articles, blog posts, and other forms of written Web material.</p>
+      <div>
+      <a href="#" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+      <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #portfolio -->
+      <!--==========================
+         Clients Section
+         ============================-->
+      <section id="testimonials">
+      <div class="container">
+      <header class="section-header">
+      <h3>Testimonials</h3>
+      </header>
+      <div class="row justify-content-center">
+      <div class="col-lg-8">
+      <div class="owl-carousel testimonials-carousel wow fadeInUp">
+      <div class="testimonial-item">
+      <img src="images/lord-shiva2.jpg" class="testimonial-img" alt="">
+      <h3>Lord Om namas Shivay </h3>
+      <h4>Om Shiv </h4>
+      <p>
+      Lord Shiva ( शिव ) is one of the principal deities of Hinduism. He is the Supreme Being within Shaivism, one of the major traditions within contemporary Hinduism.
+      Bhagwan Shiva is the "destroyer of evil and the transformer" within the Trimurti, the Hindu trinity that includes Brahma and Vishnu.
+      In Shaivism tradition, Bhagwan Shiva is the Supreme being who creates, protects and transforms the universe.
+      </p>
+      </div>
+      <div class="testimonial-item">
+      <img src="images/Lord-Shiva4.jpg" class="testimonial-img" alt="">
+      <h3>Lord shiva Shiv Shambhu </h3>
+      <h4>Om Shiv Shambhu </h4>
+      <p>
+      Lord Shiva ( शिव ) is one of the principal deities of Hinduism. He is the Supreme Being within Shaivism, one of the major traditions within contemporary Hinduism.
+      Bhagwan Shiva is the "destroyer of evil and the transformer" within the Trimurti, the Hindu trinity that includes Brahma and Vishnu.
+      In Shaivism tradition, Bhagwan Shiva is the Supreme being who creates, protects and transforms the universe.
+      </p>
+      </div>
+      <div class="testimonial-item">
+      <img src="images/Lord-Shiva-6.jpg" class="testimonial-img" alt="">
+      <h3>Lord shiva Sankar G </h3>
+      <h4>Om namas Shivay </h4>
+      <p>
+      Lord Shiva ( शिव ) is one of the principal deities of Hinduism. He is the Supreme Being within Shaivism, one of the major traditions within contemporary Hinduism.
+      Bhagwan Shiva is the "destroyer of evil and the transformer" within the Trimurti, the Hindu trinity that includes Brahma and Vishnu.
+      In Shaivism tradition, Bhagwan Shiva is the Supreme being who creates, protects and transforms the universe.
+      </p>
+      </div>
+      <div class="testimonial-item">
+      <img src="images/lord_shiva7.jpg" class="testimonial-img" alt="">
+      <h3>Lord shiva Mahadev </h3>
+      <h4>Har Har Mahadev </h4>
+      <p>
+      Lord Shiva ( शिव ) is one of the principal deities of Hinduism. He is the Supreme Being within Shaivism, one of the major traditions within contemporary Hinduism.
+      Bhagwan Shiva is the "destroyer of evil and the transformer" within the Trimurti, the Hindu trinity that includes Brahma and Vishnu.
+      In Shaivism tradition, Bhagwan Shiva is the Supreme being who creates, protects and transforms the universe.
+      </p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #testimonials -->
+      <section id="list-shiva-name"> 
+      <center><h3><u>Shiva is known by many names such as -</u></h3></center> <br>
+      <div class="container">
+      <div class="row">
+      <div class="col">
+      <ol type="1">
+      <li>Viswanatha</li>
+      <li>Mahadeva</li> 
+      <li>Mahesha</li>
+      <li>Maheshvara</li>
+      <li>Shankara</li>
+      <li>Shambhu</li>
+      <li>Rudra</li>
+      <li>Hara</li>
+      <li>Trilochana</li>
+      <li>Devendra (chief of the gods)</li>
+      <li>Neelakanta</li>
+      <li>Subhankara</li>
+      <li>Trilokinatha (lord of the three realms)</li>
+      <li>Ghrneshwar (lord of compassion).</li>
+      </ol>
+      </div>
+      <div class="col">
+      <ol type="I">
+      <li>प्रमथाधिप</li>
+      <li>मृत्युंजय</li> 
+      <li>सूक्ष्मतनु</li>
+      <li>अहिर्बुध्न्य</li>
+      <li>जगद्गुरू</li>
+      <li>सात्त्विक</li>
+      <li>अहिर्बुध्न्य</li>
+      <li>महासेनजनक</li>
+      <li>शुद्धविग्रह</li>
+      <li>भुजंगभूषण साँप के आभूषण वाले</li>
+      <li>गिरिधन्वा - मेरू पर्वत को धनुष बनाने वाले</li>
+      <li>गिरिप्रिय - पर्वत प्रेमी</li>
+      <li>खण्डपरशु - टूटा हुआ फरसा धारण करने वाले</li>
+      <li>पाशविमोचन - बंधन से छुड़ाने वाले.</li>
+      </ol>
+      </div>
+      </div>
+      </div>
+      </section><!-- #testimonials -->
+      <!--==========================
+         Team Section
+         ============================-->
+      <section id="team" class="section-bg">
+      <div class="container">
+      <div class="section-header">
+      <h3><center><u>भगवान शिव के 108 नाम</u></center></h3>
+      <p>***********************************************************************************************************************************
+      <br>
+      शिव - कल्याण स्वरूप
+      महेश्वर - माया के अधीश्वर
+      शम्भू - आनंद स्स्वरूप वाले
+      पिनाकी - पिनाक धनुष धारण करने वाले
+      शशिशेखर - सिर पर चंद्रमा धारण करने वाले
+      वामदेव - अत्यंत सुंदर स्वरूप वाले
+      विरूपाक्ष - भौंडी आँख वाले
+      कपर्दी - जटाजूट धारण करने वाले
+      नीललोहित - नीले और लाल रंग वाले
+      शंकर - सबका कल्याण करने वाले
+      शूलपाणी - हाथ में त्रिशूल धारण करने वाले
+      खटवांगी - खटिया का एक पाया रखने वाले
+      विष्णुवल्लभ - भगवान विष्णु के अतिप्रेमी
+      शिपिविष्ट - सितुहा में प्रवेश करने वाले
+      अंबिकानाथ - भगवति के पति
+      श्रीकण्ठ - सुंदर कण्ठ वाले
+      भक्तवत्सल - भक्तों को अत्यंत स्नेह करने वाले
+      भव - संसार के रूप में प्रकट होने वाले
+      शर्व - कष्टों को नष्ट करने वाले
+      त्रिलोकेश - तीनों लोकों के स्वामी
+      शितिकण्ठ - सफेद कण्ठ वाले
+      शिवाप्रिय - पार्वती के प्रिय
+      उग्र - अत्यंत उग्र रूप वाले
+      कपाली - कपाल धारण करने वाले
+      कामारी - कामदेव के शत्रु
+      अंधकारसुरसूदन - अंधक दैत्य को मारने वाले
+      गंगाधर - गंगा जी को धारण करने वाले
+      ललाटाक्ष - ललाट में आँख वाले
+      कालकाल - काल के भी काल
+      कृपानिधि - करूणा की खान
+      भीम - भयंकर रूप वाले
+      परशुहस्त - हाथ में फरसा धारण करने वाले
+      मृगपाणी - हाथ में हिरण धारण करने वाले
+      जटाधर - जटा रखने वाले
+      कैलाशवासी - कैलाश के निवासी
+      कवची - कवच धारण करने वाले
+      कठोर - अत्यन्त मजबूत देह वाले
+      त्रिपुरांतक - त्रिपुरासुर को मारने वाले
+      वृषांक - बैल के चिह्न वाली झंडा वाले
+      वृषभारूढ़ - बैल की सवारी वाले
+      भस्मोद्धूलितविग्रह - सारे शरीर में भस्म लगाने वाले
+      सामप्रिय - सामगान से प्रेम करने वाले
+      स्वरमयी - सातों स्वरों में निवास करने वाले
+      त्रयीमूर्ति - वेदरूपी विग्रह करने वाले
+      अनीश्वर - जिसका और कोई मालिक नहीं है
+      सर्वज्ञ - सब कुछ जानने वाले
+      परमात्मा - सबका अपना आपा
+      सोमसूर्याग्निलोचन - चंद्र, सूर्य और अग्निरूपी आँख वाले
+      हवि - आहूति रूपी द्रव्य वाले
+      यज्ञमय - यज्ञस्वरूप वाले
+      सोम - उमा के सहित रूप वाले
+      पंचवक्त्र - पांच मुख वाले
+      सदाशिव - नित्य कल्याण रूप वाले
+      विश्वेश्वर - सारे विश्व के ईश्वर
+      वीरभद्र - बहादुर होते हुए भी शांत रूप वाले
+      गणनाथ - गणों के स्वामी
+      प्रजापति - प्रजाओं का पालन करने वाले
+      हिरण्यरेता - स्वर्ण तेज वाले
+      दुर्धुर्ष - किसी से नहीं दबने वाले
+      गिरीश - पहाड़ों के मालिक
+      गिरिश - कैलाश पर्वत पर सोने वाले
+      अनघ - पापरहित
+      भुजंगभूषण - साँप के आभूषण वाले
+      भर्ग - पापों को भूंज देने वाले
+      गिरिधन्वा - मेरू पर्वत को धनुष बनाने वाले
+      गिरिप्रिय - पर्वत प्रेमी
+      कृत्तिवासा - गजचर्म पहनने वाले
+      पुराराति - पुरों का नाश करने वाले
+      भगवान् - सर्वसमर्थ षड्ऐश्वर्य संपन्न
+      प्रमथाधिप - प्रमथगणों के अधिपति
+      मृत्युंजय - मृत्यु को जीतने वाले
+      सूक्ष्मतनु - सूक्ष्म शरीर वाले
+      जगद्व्यापी - जगत् में व्याप्त होकर रहने वाले
+      जगद्गुरू - जगत् के गुरू
+      व्योमकेश - आकाश रूपी बाल वाले
+      महासेनजनक - कार्तिकेय के पिता
+      चारुविक्रम - सुन्दर पराक्रम वाले
+      रूद्र - भक्तों के दुख देखकर रोने वाले
+      भूतपति - भूतप्रेत या पंचभूतों के स्वामी
+      स्थाणु - स्पंदन रहित कूटस्थ रूप वाले
+      अहिर्बुध्न्य - कुण्डलिनी को धारण करने वाले
+      दिगम्बर - नग्न, आकाशरूपी वस्त्र वाले
+      अष्टमूर्ति - आठ रूप वाले
+      अनेकात्मा - अनेक रूप धारण करने वाले
+      सात्त्विक - सत्व गुण वाले
+      शुद्धविग्रह - शुद्धमूर्ति वाले
+      शाश्वत - नित्य रहने वाले
+      खण्डपरशु - टूटा हुआ फरसा धारण करने वाले
+      अज - जन्म रहित
+      पाशविमोचन - बंधन से छुड़ाने वाले
+      मृड - सुखस्वरूप वाले
+      पशुपति - पशुओं के मालिक
+      देव - स्वयं प्रकाश रूप
+      महादेव - देवों के भी देव
+      अव्यय - खर्च होने पर भी न घटने वाले
+      हरि - विष्णुस्वरूप
+      पूषदन्तभित् - पूषा के दांत उखाड़ने वाले
+      अव्यग्र - कभी भी व्यथित न होने वाले
+      दक्षाध्वरहर - दक्ष के यज्ञ को नष्ट करने वाले
+      हर - पापों व तापों को हरने वाले
+      भगनेत्रभिद् - भग देवता की आंख फोड़ने वाले
+      अव्यक्त - इंद्रियों के सामने प्रकट न होने वाले
+      सहस्राक्ष - अनंत आँख वाले
+      सहस्रपाद - अनंत पैर वाले
+      अपवर्गप्रद - कैवल्य मोक्ष देने वाले
+      अनंत - देशकालवस्तुरूपी परिछेद से रहित
+      तारक - सबको तारने वाला
+      परमेश्वर - सबसे परे ईश्वर |
+      ***************************************************************************************************************************************<br>
+      </p>
+      </div>
+      <div class="row">
+      <div class="col-lg-3 col-md-6 wow fadeInUp">
+      <div class="member">
+      <img src="images/manager4.jpg" class="img-fluid" alt="">
+      <div class="member-info">
+      <div class="member-info-content">
+      <h4>Walter White</h4>
+      <span>Chief Executive Officer</span>
+      <div class="social">
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="member">
+      <img src="images/manager3.jpg" class="img-fluid" alt="">
+      <div class="member-info">
+      <div class="member-info-content">
+      <h4>Sarah Jhonson</h4>
+      <span>Product Manager</span>
+      <div class="social">
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+      <div class="member">
+      <img src="images/manager2.jpg" class="img-fluid" alt="">
+      <div class="member-info">
+      <div class="member-info-content">
+      <h4>William Anderson</h4>
+      <span>CTO</span>
+      <div class="social">
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="member">
+      <img src="images/manager1.jpg" class="img-fluid" alt="">
+      <div class="member-info">
+      <div class="member-info-content">
+      <h4>Amanda Jepson</h4>
+      <span>Accountant</span>
+      <div class="social">
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #team -->
+      <!--==========================
+         Clients Section
+         ============================-->
+      <br>
+      <section id="ceo" class="wow fadeInUp">
+      <div class="container">
+      <header class="section-header">
+      <h3>Uk's CEO Images --- </h3>
+      </header>
+      <div class="images-container">
+      <img src="images/ceo3.jpg" alt="">
+      <img src="images/ceo4.jpg" alt="">
+      <img src="images/ceo6.jpg" alt="">
+      <img src="images/ceo7.jpg" alt="">
+      <img src="images/ceo8.jpg" alt="">
+      <img src="images/ceo9.jpg" alt="">
+      <img src="images/ceo3.jpg" alt="">
+      <img src="images/ceo4.jpg" alt="">
+      <img src="images/ceo6.jpg" alt="">
+      <img src="images/ceo7.jpg" alt="">
+      <img src="images/ceo8.jpg" alt="">
+      <img src="images/ceo9.jpg" alt="">
+      <img src="images/ceo2.jpg" alt="">
+      <img src="images/ceo5.jpg" alt="">
+      <img src="images/ceo12.jpg" alt="">
+      <img src="images/ceo5.jpg" alt="">
+      <img src="images/ceo12.jpg" alt="">
+      </div>
+      </div>
+      </section><!-- #clients -->
+      <!--==========================
+         Pricing Section
+         ============================-->
+      <section id="pricing" class="wow fadeInUp section-bg">
+      <div class="container">
+      <header class="section-header">
+      <h3>Pricing</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      </header>
+      <div class="row flex-items-xs-middle flex-items-xs-center">
+      <!-- Basic Plan  -->
+      <div class="col-xs-12 col-lg-4">
+      <div class="card">
+      <div class="card-header">
+      <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+      </div>
+      <div class="card-block">
+      <h4 class="card-title"> 
+      Basic Plan
+      </h4>
+      <ul class="list-group">
+      <li class="list-group-item">Odio animi voluptates</li>
+      <li class="list-group-item">Inventore quisquam et</li>
+      <li class="list-group-item">Et perspiciatis suscipit</li>
+      <li class="list-group-item">24/7 Support System</li>
+      </ul>
+      <a href="#" class="btn">Choose Plan</a>
+      </div>
+      </div>
+      </div>
+      <!-- Regular Plan  -->
+      <div class="col-xs-12 col-lg-4">
+      <div class="card">
+      <div class="card-header">
+      <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+      </div>
+      <div class="card-block">
+      <h4 class="card-title"> 
+      Regular Plan
+      </h4>
+      <ul class="list-group">
+      <li class="list-group-item">Odio animi voluptates</li>
+      <li class="list-group-item">Inventore quisquam et</li>
+      <li class="list-group-item">Et perspiciatis suscipit</li>
+      <li class="list-group-item">24/7 Support System</li>
+      </ul>
+      <a href="#" class="btn">Choose Plan</a>
+      </div>
+      </div>
+      </div>
+      <!-- Premium Plan  -->
+      <div class="col-xs-12 col-lg-4">
+      <div class="card">
+      <div class="card-header">
+      <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+      </div>
+      <div class="card-block">
+      <h4 class="card-title"> 
+      Premium Plan
+      </h4>
+      <ul class="list-group">
+      <li class="list-group-item">Odio animi voluptates</li>
+      <li class="list-group-item">Inventore quisquam et</li>
+      <li class="list-group-item">Et perspiciatis suscipit</li>
+      <li class="list-group-item">24/7 Support System</li>
+      </ul>
+      <a href="#" class="btn">Choose Plan</a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section><!-- #pricing -->
+      <!--==========================
+         Frequently Asked Questions Section
+         ============================-->
+      <section id="faq">
+      <div class="container">
+      <header class="section-header">
+      <h3>Frequently Asked Questions</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      </header>
+      <ul id="faq-list" class="wow fadeInUp">
+      <li>
+      <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="ion-android-remove"></i></a>
+      <div id="faq1" class="collapse" data-parent="#faq-list">
+      <p>
+      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+      </p>
+      </div>
+      </li>
+      <li>
+      <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="ion-android-remove"></i></a>
+      <div id="faq2" class="collapse" data-parent="#faq-list">
+      <p>
+      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+      </p>
+      </div>
+      </li>
+      <li>
+      <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="ion-android-remove"></i></a>
+      <div id="faq3" class="collapse" data-parent="#faq-list">
+      <p>
+      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+      </p>
+      </div>
+      </li>
+      <li>
+      <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="ion-android-remove"></i></a>
+      <div id="faq4" class="collapse" data-parent="#faq-list">
+      <p>
+      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+      </p>
+      </div>
+      </li>
+      <li>
+      <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="ion-android-remove"></i></a>
+      <div id="faq5" class="collapse" data-parent="#faq-list">
+      <p>
+      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+      </p>
+      </div>
+      </li>
+      <li>
+      <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
+      <div id="faq6" class="collapse" data-parent="#faq-list">
+      <p>
+      Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+      </p>
+      </div>
+      </li>
+      </ul>
+      </div>
+      </section><!-- #faq -->
+      <br>
+      <!-- jQuery first, then Bootstrap JS. All Inclusive Plug-in -->
+      <!--<script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+         <script src="dist/js/bootstrap.min.js"></script>-->
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col">
+      <ul class = "pagination">
+      <li class = "page-item"> <a class="page-link" href="#"> Prev </a> </li>
+      <li class = "page-item"> <a class="page-link" href="C:/Users/Sourabh/Desktop/wesite/change_org.html"> 1 </a> </li>
+      <li class = "page-item"> <a class="page-link" href="C:/Users/Sourabh/Desktop/wesite/petition.html"> 2 </a> 
+      </li>
+      <li class = "page-item"> <a class="page-link" href="C:/Users/Sourabh/Desktop/wesite/patition_design.html"> 3 </a> </li>
+      <li class = "page-item"> <a class="page-link" href="#"> 4 </a> </li>
+      <li class = "page-item"> <a class="page-link" href="#"> Next </a> </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      <hr>
+      <footer>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col" style="background-color:lightblue">
+      <table>
+      <tr><th>Company</th></tr>
+      <tr><td><a href="#">About</a></td></tr>
+      <tr><td><a href="#">Impact</a></td></tr>
+      <tr><td><a href="#">Careers</a></td></tr>
+      <tr><td><a href="#">Team</a></td></tr>
+      </table>
+      </div>
+      <div class="col" style="background-color:lightblue;">
+      <table>
+      <tr><th>Community</th></tr>
+      <tr><td><a href="#">Blog</a></td></tr>
+      </table>
+      </div>
+      <div class="col" style="background-color:lightblue;">
+      <table>
+      <tr><th>Support</th></tr>
+      <tr><td><a href="#">Help</a></td></tr>
+      <tr><td><a href="#">Guides</a></td></tr>
+      <tr><td><a href="#">Privacy</a></td></tr>
+      <tr><td><a href="#">Policies</a></td></tr>
+      </table>
+      </div>
+      <div class="col" style="background-color:lightblue;">
+      <table>
+      <tr><th>Connect</th></tr>
+      <tr><td><a href="#">Twitter</a></td></tr>
+      <tr><td><a href="#">Facebook</a></td></tr>
+      </table>
+      </div>
+      </div>
+      <br><br><br><br>
+      <!--<div class="col-lg-3 col-md-6 footer-contact">
+         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+         </div>-->
+      <div class="row-md-4 p-3 fixed-bottom">
+      <center>
+      © 2019, Prudigital media pvt Ltd. 
+      <p>
+      This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+      </p>
+      </center>
+      </div>
+      </footer>
+   </body>
+</html>
