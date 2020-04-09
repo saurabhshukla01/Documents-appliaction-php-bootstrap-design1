@@ -1,0 +1,214 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Reports_model extends Prud_Model{
+
+	var $column_search = array('company_name' => 'company_name', 'campaign_date' => 'campaign_date', 'client_uid' => 'client_uid', 'month_date' => 'month_date');
+    var $column_alias = array('company_name' => 'hs', 'campaign_date' => 'cds', 'client_uid' => 'hs', 'month_date' => 'cms'); 
+
+	function __construct() {
+		parent::__construct();
+		$this->TYPE = $this->session->userdata('type');
+        $this->LOGIN_ID = ($this->TYPE =='backend') ? $this->session->userdata('admin')['login_id'] : $this->session->userdata('client')['login_id'];
+	}
+
+	public function get_campaingReportList($clientId){
+		$length =   (isset($_POST['length']))?$_POST['length']:"";
+		$start  =   (isset( $_POST['start']))?$_POST['start']:"";
+
+		$this->slave->select('hs.client_uid, hs.client_id, hs.fname, hs.lname, hs.email, hs.company_name, hm.campaign_id, hm.campaign_uid, hm.name as campaing_name, hm.status, hm.processed_at, hm.finished_at, hm.scheduled_at, hm.date_added, hm.subject, hm.campaign_domain_id, hl.name as list_name, hl.list_uid');
+		$this->slave->from('hs_clients hs');
+		$this->slave->join('hs_campaign as hm ','hm.client_id=hs.client_id');
+		$this->slave->join('hs_list as hl ','hl.list_id=hm.list_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		$this->slave->order_by('hm.finished_at', 'desc');
+		$this->slave->limit($length,$start);
+		$this->get_datatables_query();
+		$customer = $this->slave->get();
+		return $customer->result();
+	}
+
+
+	public function count_filtered($clientId){
+		$this->slave->select('hs.client_uid, hs.client_id, hs.fname, hs.lname, hs.email, hs.company_name, hm.campaign_id, hm.campaign_uid, hm.name as campaing_name, hm.status, hm.processed_at, hm.finished_at, hm.scheduled_at, hm.date_added, hm.subject, hm.campaign_domain_id, hl.name as list_name, hl.list_uid');
+        $this->slave->from('hs_clients hs');
+        $this->slave->join('hs_campaign as hm ','hm.client_id=hs.client_id');
+        $this->slave->join('hs_list as hl ','hl.list_id=hm.list_id');
+        $this->slave->where("hs.client_id = ".$clientId."");
+        $this->slave->where("hs.status != '2'");
+		$this->get_datatables_query();
+		$query = $this->slave->get();
+		return $query->num_rows();
+	}
+
+	public function count_all($clientId){
+		$this->slave->from('hs_clients hs');
+        $this->slave->join('hs_campaign as hm ','hm.client_id=hs.client_id');
+        $this->slave->join('hs_list as hl ','hl.list_id=hm.list_id');
+        $this->slave->where("hs.client_id = ".$clientId."");
+        $this->slave->where("hs.status != '2'");
+		return $this->slave->count_all_results();
+	}
+
+	public function get_datatables_query() {
+        $i = 0;
+        $column_name    = isset($_POST['columns'])? $_POST['columns'] : array();
+        foreach($column_name as $col) {
+            $col_name = $col['data'];
+            $col_value = $col['search']['value'];
+            if ( $col_value != '') {
+                if($i===0){
+                    $this->slave->group_start();
+                }
+                switch($col_name) {
+                    case "campaign":
+                        $this->slave->like('hm.name', $col_value);
+                        $this->slave->or_like('hm.campaign_uid', $col_value);
+                        $this->slave->or_like('hl.list_uid', $col_value);
+                        $this->slave->or_like('hl.name', $col_value);
+                        break;
+                     case "client":
+                        $this->slave->like('hs.fname', $col_value);
+                        $this->slave->or_like('hs.client_uid', $col_value);
+                        break;
+                     case "status":
+                        $this->slave->like('hm.status', $col_value);
+                        break;
+                     case "finished_at":
+                         $this->slave->where('date(hm.finished_at)', $col_value);
+                        break;
+                     case "list":
+                        $this->slave->like('hl.name', $col_value);
+                        $this->slave->or_like('hl.list_uid', $col_value);
+                        break;
+                     default :
+                    }
+                $i++;
+            }
+        }
+        if($i > 0) {
+            $this->slave->group_end();
+        }
+    }
+
+	public function client_daily_report($clientId){
+		$length =   (isset($_POST['length']))?$_POST['length']:"";
+		$start  =   (isset( $_POST['start']))?$_POST['start']:"";
+
+		$this->slave->select('hs.company_name, hs.client_uid, cds.campaign_date, cds.processed, cds.campaign_count, cds.delivery_success, cds.delivery_failure');
+		$this->slave->from('hs_client_daily_stats as cds');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cds.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		$this->slave->order_by('cds.campaign_date', 'desc');
+		$this->slave->limit($length,$start);
+		$this->get_datatables_query_filter();
+		$client = $this->slave->get();
+		return $client->result();
+	}
+
+	public function client_daily_report_countAll($clientId){
+		$this->slave->select('hs.company_name, hs.client_uid, cds.campaign_date, cds.processed, cds.campaign_count, cds.delivery_success, cds.delivery_failure');
+		$this->slave->from('hs_client_daily_stats as cds');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cds.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		return $this->slave->count_all_results();
+	}
+
+	public function client_daily_report_countFilter($clientId){
+		$this->slave->select('hs.company_name, hs.client_uid, cds.campaign_date, cds.processed, cds.campaign_count, cds.delivery_success, cds.delivery_failure'); 
+		$this->slave->from('hs_client_daily_stats as cds');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cds.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");		
+		$this->get_datatables_query_filter();
+		$query = $this->slave->get();
+		return $query->num_rows();
+	}
+
+	public function get_datatables_query_filter()
+    {
+        $i = 0;
+        $column_name    = isset($_POST['columns'])?$_POST['columns']:array();
+        foreach($column_name as $col)
+        {
+            $col_name = $col['name'];
+            $col_value = $col['search']['value'];
+            if (in_array($col_name, $this->column_search) && $col_value != '') 
+            {
+                $col_database = $this->column_alias[$col_name].'.'.$this->column_search[$col_name];
+                if($i===0)
+                {
+                    $this->slave->group_start();
+                    switch($col_name)
+                    {
+                        case "company_name":
+                            $this->slave->like("CONCAT_WS(' ',hs.company_name,hs.client_uid)", $col_value, "both");
+                            break;
+                        default:
+                            $this->slave->like($col_database, $col_value);
+                    }
+                }
+                else
+                {
+                    switch($col_name) 
+                    {
+                        case "company_name":
+                            $this->slave->like("CONCAT_WS(' ',hs.company_name,c.client_uid)", $col_value, "both");
+                            break;
+                        
+                        default:
+                            $this->slave->like($col_database, $col_value);
+                    }
+                }
+                $i++;
+            }
+        }
+        if($i > 0)
+        {
+
+            $this->slave->group_end();
+        }
+    }
+
+
+	public function client_month_report($clientId){
+		$length =   (isset($_POST['length']))?$_POST['length']:"";
+		$start  =   (isset( $_POST['start']))?$_POST['start']:"";
+
+		$this->slave->select('hs.company_name, hs.client_uid, cms.month_date, cms.processed, cms.campaign_count, cms.delivery_success, cms.delivery_failure');
+		$this->slave->from('hs_client_monthly_stats as cms');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cms.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		$this->slave->order_by('cms.month_date', 'desc');
+		$this->slave->limit($length,$start);
+		$this->get_datatables_query_filter();
+		$client = $this->slave->get();
+		return $client->result();
+	}
+
+	public function client_month_report_countAll($clientId){
+		$this->slave->select('hs.company_name, hs.client_uid, cms.month_date, cms.processed, cms.campaign_count, cms.delivery_success, cms.delivery_failure');
+		$this->slave->from('hs_client_monthly_stats as cms');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cms.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		return $this->slave->count_all_results();
+	}
+
+	public function client_month_report_countFilter($clientId){
+		$this->slave->select('hs.company_name, hs.client_uid, cms.month_date, cms.processed, cms.campaign_count, cms.delivery_success, cms.delivery_failure');
+		$this->slave->from('hs_client_monthly_stats as cms');
+		$this->slave->join('hs_clients as hs ','hs.client_id=cms.client_id');
+		$this->slave->where("hs.client_id = ".$clientId."");
+		$this->slave->where("hs.status != '2'");
+		$this->get_datatables_query_filter();
+		$query = $this->slave->get();
+		return $query->num_rows();
+	}
+
+	public function report_download
+
+}
